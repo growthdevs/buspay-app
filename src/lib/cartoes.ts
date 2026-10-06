@@ -10,7 +10,7 @@ export function detectarBandeira(numero: string): TipoCartaoEnum | undefined {
   if (/^3(0[0-5]|[68])/.test(n)) return TipoCartaoEnum.DinersClub;
   if (/^35/.test(n)) return TipoCartaoEnum.JCB;
   if (/^6(011|5)/.test(n)) return TipoCartaoEnum.Discover;
-  if (/^4/.test(n)) return 16 as TipoCartaoEnum; // Visa
+  if (/^4/.test(n)) return TipoCartaoEnum.Visa;
   if (/^(5[1-5]|2[2-7])/.test(n)) return TipoCartaoEnum.Mastercard;
   return undefined;
 }
@@ -25,7 +25,7 @@ const ICONES: Partial<Record<number, string>> = {
   [TipoCartaoEnum.JCB]: "jcb.svg",
   [TipoCartaoEnum.Mastercard]: "mastercard.svg",
   [TipoCartaoEnum.SoroCred]: "sorocred.svg",
-  16: "visa-azul.svg",
+  [TipoCartaoEnum.Visa]: "visa-azul.svg",
 };
 
 export function iconeBandeira(bandeira?: number): string | undefined {
