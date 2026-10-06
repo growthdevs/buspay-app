@@ -471,4 +471,8 @@ export interface CartaoCredito {
   validade: string;
   apelido?: string;
   favorito: boolean;
+  cepCobranca?: string;
+  logradouroCobranca?: string;
+  bairroCobranca?: string;
+  cidadeCobranca?: string;
 }

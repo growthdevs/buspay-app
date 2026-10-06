@@ -60,3 +60,9 @@
   font-size: 12px;
   color: var(--ion-color-medium);
 }
+
+.mensagem-cep-incompleto {
+  color: var(--ion-color-danger);
+  font-size: 0.8rem;
+  margin: 0.25rem 0 0.75rem;
+}

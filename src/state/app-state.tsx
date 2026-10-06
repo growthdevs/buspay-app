@@ -114,7 +114,19 @@ export function AppStateProvider({ children }: { children: ReactNode }) {
   const [mostrarToolbarECarteiras, setMostrarToolbarECarteiras] = useState(true);
 
   const [cartoes, setCartoes] = useState<CartaoCredito[]>([
-    { id: 1, bandeira: TipoCartaoEnum.Visa, ultimos4: "4781", nomeImpresso: "ERICK OLIVEIRA", validade: "01/29", apelido: "Cartão pessoal", favorito: true },
+    {
+      id: 1,
+      bandeira: TipoCartaoEnum.Visa,
+      ultimos4: "4781",
+      nomeImpresso: "ERICK OLIVEIRA",
+      validade: "01/29",
+      apelido: "Cartão pessoal",
+      favorito: true,
+      cepCobranca: "13010-020",
+      logradouroCobranca: "Rua das Palmeiras",
+      bairroCobranca: "Centro",
+      cidadeCobranca: "Campinas",
+    },
   ]);
 
   const salvarCartao = useCallback<AppState["salvarCartao"]>((dados) => {
