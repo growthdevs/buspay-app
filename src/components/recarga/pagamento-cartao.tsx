@@ -1,4 +1,5 @@
-import { IonButton, IonCol, IonContent, IonHeader, IonInput, IonText, IonToggle, IonToolbar } from "@ionic/react";
+import { IonButton, IonCol, IonContent, IonHeader, IonIcon, IonImg, IonInput, IonText, IonToggle, IonToolbar } from "@ionic/react";
+import { cardOutline } from "ionicons/icons";
 import { useRef, useState } from "react";
 
 import type { CartaoCredito } from "../../core/models";
@@ -193,33 +194,24 @@ export function PagamentoCartao({
       )}
       <IonContent className="ion-padding">
         <div className="px-2 cartao-form">
-          <div className="cartao-preview">
-            <div className="cartao-preview-bandeira">{icone && <img src={icone} alt="" />}</div>
-            <div className="cartao-preview-numero">
-              {edicao ? numeroMascarado(cartao.ultimos4) : numero || "0000 0000 0000 0000"}
-            </div>
-            <div className="cartao-preview-rodape">
-              <div>
-                <small>NOME DO TITULAR</small>
-                <span>{(edicao ? cartao.nomeImpresso : nome).toUpperCase() || " "}</span>
-              </div>
-              <div className="text-end">
-                <small>VALIDADE</small>
-                <span>{edicao ? "**/**" : validade || "mm/aa"}</span>
-              </div>
-            </div>
+          <div className="my-4">
+            <IonInput
+              label="Número do cartão"
+              labelPlacement="stacked"
+              fill="outline"
+              placeholder="xxxx xxxx xxxx xxxx"
+              inputMode="numeric"
+              disabled={edicao}
+              value={edicao ? numeroMascarado(cartao.ultimos4) : numero}
+              onIonInput={(e) => setNumero(aplicarMascaraCartaoPadrao(String(e.detail.value ?? "")))}
+            >
+              {icone ? (
+                <IonImg slot="end" src={icone} alt="" className="icone-bandeira-cartao" />
+              ) : (
+                <IonIcon slot="end" icon={cardOutline} className="icone-cartao-padrao" />
+              )}
+            </IonInput>
           </div>
-
-          <IonInput
-            label="Número do cartão"
-            labelPlacement="stacked"
-            fill="outline"
-            placeholder="xxxx xxxx xxxx xxxx"
-            inputMode="numeric"
-            disabled={edicao}
-            value={edicao ? numeroMascarado(cartao.ultimos4) : numero}
-            onIonInput={(e) => setNumero(aplicarMascaraCartaoPadrao(String(e.detail.value ?? "")))}
-          />
           <div className="row my-4 py-2">
             <div className="col-6">
               <IonInput
