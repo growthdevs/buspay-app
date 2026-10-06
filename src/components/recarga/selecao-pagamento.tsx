@@ -1,13 +1,11 @@
-import { IonButton, IonCol, IonContent, IonGrid, IonHeader, IonIcon, IonRow, IonText, IonToolbar } from "@ionic/react";
-import { eyeOffOutline, eyeOutline } from "ionicons/icons";
+import { IonButton, IonContent, IonHeader, IonIcon, IonToolbar } from "@ionic/react";
+import { cardOutline, eyeOffOutline, eyeOutline } from "ionicons/icons";
 import { useState } from "react";
 
 import type { Praca } from "../../core/models";
 import { formatarMoeda } from "../../lib/mask-tools";
 import type { DismissFn } from "../../lib/modal";
 import { useModal } from "../../lib/modal";
-import { overlayService } from "../../lib/overlay";
-import { valoresRecargaSugeridos } from "../../mocks/data";
 import { CompraRealizada } from "./compra-realizada";
 import { PagamentoCartao } from "./pagamento-cartao";
 import { PagamentoPix } from "./pagamento-pix";
@@ -57,94 +55,85 @@ export function SelecaoPagamento({
   };
 
   return (
-    <>
-      <IonHeader className="ion-no-border">
-        <IonToolbar className={`ion-padding pb-0 item${tipoRecarga}`}>
+    <div className={`recarga-selecao recarga-selecao-${tipoRecarga}`}>
+      <IonHeader className="ion-no-border recarga-selecao-header">
+        <IonToolbar className="recarga-selecao-toolbar">
           <div className="safe-area-top" />
-          <IonText className="ion-text-end">
-            <p onClick={() => dismiss()} className="btn-close-modal text-white m-0 fw-bold">
-              X
-            </p>
-          </IonText>
-          <div>
+          <IonButton fill="clear" className="recarga-selecao-close" aria-label="Fechar recarga" onClick={() => dismiss()}>
+            <span aria-hidden="true">X</span>
+          </IonButton>
+          <div className="recarga-selecao-title">
             <span>Recarga</span>
-            <h1>
-              <b>{title}</b>
-            </h1>
+            <h1>{title}</h1>
           </div>
         </IonToolbar>
+        <div className="recarga-selecao-balance">
+          <span>saldo atual: {mostrarSaldo ? formatarMoeda(saldoAtual) : "R$ * * * *"}</span>
+          <IonButton fill="clear" aria-label={mostrarSaldo ? "Ocultar saldo" : "Mostrar saldo"} onClick={() => setMostrarSaldo((v) => !v)}>
+            <IonIcon slot="icon-only" icon={mostrarSaldo ? eyeOutline : eyeOffOutline} />
+          </IonButton>
+        </div>
       </IonHeader>
-      <div className={`ion-padding item${tipoRecarga} border-saldo-atual-${tipoRecarga} texto-saldo-total d-flex justify-content-between align-items-center`}>
-        <span className="fw-bold">saldo atual: {mostrarSaldo ? formatarMoeda(saldoAtual) : "R$ * * * *"}</span>
-        <span className="pe-3" onClick={() => setMostrarSaldo((v) => !v)}>
-          <IonIcon className="eye-saldo" icon={mostrarSaldo ? eyeOutline : eyeOffOutline} />
-        </span>
-      </div>
-      <IonContent>
-        <div className="ion-padding ion-margin">
-          <h2>
-            <b>Quanto você deseja recarregar?</b>
-          </h2>
+      <IonContent className="recarga-selecao-content">
+        <div className="recarga-selecao-body">
+        <section className="recarga-selecao-amount">
+          <h2>Quanto você deseja recarregar?</h2>
           <input
             id="inputValor"
+            aria-label="Valor da recarga"
             placeholder="R$ 0,00"
-            className={`text-saldo Saldo${tipoRecarga}`}
+            className="recarga-selecao-value"
             value={valor ? formatarMoeda(valor) : ""}
             onChange={(e) => aplicarMascara(e.target.value)}
             inputMode="numeric"
           />
-          <p className="small-font-text">
+          {abaixoMinimo && <p className="recarga-selecao-minimum" role="alert">
             Valor mínimo de <b>{formatarMoeda(minimo)}</b> para recarga.
-          </p>
-          <div className="d-flex flex-wrap gap-2 my-2">
-            {valoresRecargaSugeridos.map((v) => (
-              <IonButton key={v} fill="outline" size="small" onClick={() => setValor(v)}>
-                {formatarMoeda(v)}
-              </IonButton>
-            ))}
-          </div>
-          <div className="faixa-separadora" />
-          <h6 className="mt-4">
-            <b>Selecione a forma de pagamento</b>
-          </h6>
-          <IonGrid>
-            <IonRow>
-              <IonCol
-                size="5"
-                className={`${metodo === "pix" ? `botao-forma-pagamento-selecionado btn-pagamento-fundo-${tipoRecarga}` : "botao-forma-pagamento"}`}
+          </p>}
+        </section>
+        <section className="recarga-selecao-payment">
+          <h3>Selecione a forma de pagamento</h3>
+          <div className="recarga-selecao-methods">
+              <IonButton
+                fill="clear"
+                aria-pressed={metodo === "pix"}
+                className={`recarga-selecao-method ${metodo === "pix" ? "is-selected" : ""}`}
                 onClick={() => setMetodo("pix")}
               >
-                <div className="p-3">
-                  <p className="small-font-text m-0">PIX</p>
-                </div>
-              </IonCol>
-              <IonCol
-                size="5"
-                className={`${metodo === "cartao" ? `botao-forma-pagamento-selecionado btn-pagamento-fundo-${tipoRecarga}` : "botao-forma-pagamento"}`}
+                <span className="recarga-selecao-method-label">
+                  <img src="/assets/icon/pix.png" alt="" />
+                  <span>PIX</span>
+                </span>
+              </IonButton>
+              <IonButton
+                fill="clear"
+                aria-pressed={metodo === "cartao"}
+                className={`recarga-selecao-method ${metodo === "cartao" ? "is-selected" : ""}`}
                 onClick={() => setMetodo("cartao")}
               >
-                <div className="p-3">
-                  <p className="small-font-text mb-0">Cartão de crédito</p>
-                </div>
-              </IonCol>
-            </IonRow>
-          </IonGrid>
-        </div>
-        <div className="container">
+                <span className="recarga-selecao-method-label">
+                  <IonIcon icon={cardOutline} />
+                  <span>Cartão de<br />crédito</span>
+                </span>
+              </IonButton>
+          </div>
+        </section>
+        <div className="recarga-selecao-actions">
           <IonButton
             onClick={avancar}
             expand="block"
             color="primary"
-            className="btn-avc"
+            className="recarga-selecao-next"
             disabled={!metodo || !valor || abaixoMinimo}
           >
             Avançar
           </IonButton>
-          <IonButton onClick={() => dismiss()} expand="block" className="btn-cancel" fill="clear">
+          <IonButton onClick={() => dismiss()} expand="block" className="recarga-selecao-cancel" fill="clear">
             Cancelar recarga
           </IonButton>
         </div>
+        </div>
       </IonContent>
-    </>
+    </div>
   );
 }

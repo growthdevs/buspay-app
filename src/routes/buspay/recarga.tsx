@@ -25,6 +25,14 @@ import { useAppState } from "../../state/app-state";
 import "./recarga.scss";
 
 export const Route = createFileRoute("/buspay/recarga")({
+  head: () => ({ meta: [
+    { title: "Recarga | Aplicativo Buspay" },
+    { name: "description", content: "Recarregue sua carteira Buspay com PIX ou cartão de crédito." },
+    { property: "og:title", content: "Recarga | Aplicativo Buspay" },
+    { property: "og:description", content: "Recarregue sua carteira Buspay com PIX ou cartão de crédito." },
+    { property: "og:type", content: "website" },
+    { name: "twitter:card", content: "summary_large_image" },
+  ] }),
   component: RecargaPage,
 });
 
