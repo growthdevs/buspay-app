@@ -461,3 +461,14 @@ export interface PaginationResponse<T> {
   totalItemCount: number;
   itens: T[];
 }
+
+/** Cartão de crédito salvo pelo usuário (somente os 4 últimos dígitos ficam guardados). */
+export interface CartaoCredito {
+  id: number;
+  bandeira?: TipoCartaoEnum;
+  ultimos4: string;
+  nomeImpresso: string;
+  validade: string;
+  apelido?: string;
+  favorito: boolean;
+}

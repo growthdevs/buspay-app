@@ -7,7 +7,7 @@ import { formatarMoeda } from "../../lib/mask-tools";
 import type { DismissFn } from "../../lib/modal";
 import { useModal } from "../../lib/modal";
 import { CompraRealizada } from "./compra-realizada";
-import { PagamentoCartao } from "./pagamento-cartao";
+import { SelecionarCartao } from "./selecionar-cartao";
 import { PagamentoPix } from "./pagamento-pix";
 import "./selecao-pagamento.scss";
 
@@ -37,8 +37,8 @@ export function SelecaoPagamento({
       dismiss("ok");
     } else {
       const ret = await present((fechar) => (
-        <PagamentoCartao dismiss={fechar} tipoRecarga={tipoRecarga} valor={valor} />
-      ));
+        <SelecionarCartao dismiss={fechar} tipoRecarga={tipoRecarga} valor={valor} />
+      ), { backdropDismiss: false, cssClass: "modal-fullscreen" });
       if (ret.data === "sucesso") {
         await present((fechar) => (
           <CompraRealizada dismiss={fechar} sucesso valor={valor} tipoCarteira={title} />
