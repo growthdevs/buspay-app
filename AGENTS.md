@@ -8,3 +8,5 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Scope recharge selection styles under `.recarga-selecao` so wallet colors and controls do not leak into other Ionic screens.

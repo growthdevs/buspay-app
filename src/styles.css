@@ -62,6 +62,10 @@
 }
 
 :root {
+  --recarga-surface: oklch(1 0 0);
+  --recarga-text: oklch(0 0 0);
+  --recarga-separator: oklch(0.967 0 0);
+  --recarga-button-shadow: 0 2px 4px oklch(0 0 0 / 18%);
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.129 0.042 264.695);
