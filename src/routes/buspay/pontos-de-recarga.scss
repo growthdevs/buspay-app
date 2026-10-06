@@ -1,0 +1,21 @@
+.lista-posto-item {
+  padding: 16px 0 5px 0;
+  border-bottom: 1px solid #ccc;
+}
+.item-nome-loja {
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--ion-color-dark);
+}
+.item-endereco-loja {
+  font-size: 12px;
+}
+.item-lista-posto-km {
+  margin-right: 10px;
+  font-size: 12px;
+}
+#divMapa {
+  width: 100%;
+  height: 220px;
+  background: url("/assets/images/recarga/mapa.png") center/cover no-repeat;
+}

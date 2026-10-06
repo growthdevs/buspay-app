@@ -1,0 +1,680 @@
+// ============================================================================
+// VARIÁVEIS DE SPACING
+// ============================================================================
+
+// Spacers customizados além do padrão do Bootstrap
+$spacer-xs: 0.25rem; // 4px
+$spacer-sm: 0.5rem; // 8px
+$spacer-md: 1rem; // 16px
+$spacer-lg: 1.5rem; // 24px
+$spacer-xl: 2rem; // 32px
+$spacer-2xl: 2.5rem; // 40px
+$spacer-3xl: 3rem; // 48px
+$spacer-4xl: 3.5rem; // 56px
+$spacer-5xl: 4rem; // 64px
+$spacer-6xl: 4.5rem; // 72px
+$spacer-7xl: 5rem; // 80px
+$spacer-8xl: 5.5rem; // 88px
+$spacer-9xl: 6rem; // 96px
+$spacer-10xl: 6.5rem; // 104px
+$spacer-11xl: 7rem; // 112px
+$spacer-12xl: 7.5rem; // 120px
+
+// ============================================================================
+// MARGIN - TODAS AS DIREÇÕES
+// ============================================================================
+
+// XS (4px)
+.m-xs {
+  margin: $spacer-xs !important;
+}
+
+.mt-xs {
+  margin-top: $spacer-xs !important;
+}
+
+.mb-xs {
+  margin-bottom: $spacer-xs !important;
+}
+
+.ml-xs {
+  margin-left: $spacer-xs !important;
+}
+
+.mr-xs {
+  margin-right: $spacer-xs !important;
+}
+
+.mx-xs {
+  margin-left: $spacer-xs !important;
+  margin-right: $spacer-xs !important;
+}
+
+.my-xs {
+  margin-top: $spacer-xs !important;
+  margin-bottom: $spacer-xs !important;
+}
+
+// SM (8px)
+.m-sm {
+  margin: $spacer-sm !important;
+}
+
+.mt-sm {
+  margin-top: $spacer-sm !important;
+}
+
+.mb-sm {
+  margin-bottom: $spacer-sm !important;
+}
+
+.ml-sm {
+  margin-left: $spacer-sm !important;
+}
+
+.mr-sm {
+  margin-right: $spacer-sm !important;
+}
+
+.mx-sm {
+  margin-left: $spacer-sm !important;
+  margin-right: $spacer-sm !important;
+}
+
+.my-sm {
+  margin-top: $spacer-sm !important;
+  margin-bottom: $spacer-sm !important;
+}
+
+// LG (24px)
+.m-lg {
+  margin: $spacer-lg !important;
+}
+
+.mt-lg {
+  margin-top: $spacer-lg !important;
+}
+
+.mb-lg {
+  margin-bottom: $spacer-lg !important;
+}
+
+.ml-lg {
+  margin-left: $spacer-lg !important;
+}
+
+.mr-lg {
+  margin-right: $spacer-lg !important;
+}
+
+.mx-lg {
+  margin-left: $spacer-lg !important;
+  margin-right: $spacer-lg !important;
+}
+
+.my-lg {
+  margin-top: $spacer-lg !important;
+  margin-bottom: $spacer-lg !important;
+}
+
+// XL (32px)
+.m-xl {
+  margin: $spacer-xl !important;
+}
+
+.mt-xl {
+  margin-top: $spacer-xl !important;
+}
+
+.mb-xl {
+  margin-bottom: $spacer-xl !important;
+}
+
+.ml-xl {
+  margin-left: $spacer-xl !important;
+}
+
+.mr-xl {
+  margin-right: $spacer-xl !important;
+}
+
+.mx-xl {
+  margin-left: $spacer-xl !important;
+  margin-right: $spacer-xl !important;
+}
+
+.my-xl {
+  margin-top: $spacer-xl !important;
+  margin-bottom: $spacer-xl !important;
+}
+
+// 2XL (40px)
+.m-2xl {
+  margin: $spacer-2xl !important;
+}
+
+.mt-2xl {
+  margin-top: $spacer-2xl !important;
+}
+
+.mb-2xl {
+  margin-bottom: $spacer-2xl !important;
+}
+
+.ml-2xl {
+  margin-left: $spacer-2xl !important;
+}
+
+.mr-2xl {
+  margin-right: $spacer-2xl !important;
+}
+
+.mx-2xl {
+  margin-left: $spacer-2xl !important;
+  margin-right: $spacer-2xl !important;
+}
+
+.my-2xl {
+  margin-top: $spacer-2xl !important;
+  margin-bottom: $spacer-2xl !important;
+}
+
+// 3XL (48px)
+.m-3xl {
+  margin: $spacer-3xl !important;
+}
+
+.mt-3xl {
+  margin-top: $spacer-3xl !important;
+}
+
+.mb-3xl {
+  margin-bottom: $spacer-3xl !important;
+}
+
+.ml-3xl {
+  margin-left: $spacer-3xl !important;
+}
+
+.mr-3xl {
+  margin-right: $spacer-3xl !important;
+}
+
+.mx-3xl {
+  margin-left: $spacer-3xl !important;
+  margin-right: $spacer-3xl !important;
+}
+
+.my-3xl {
+  margin-top: $spacer-3xl !important;
+  margin-bottom: $spacer-3xl !important;
+}
+
+// 4XL (56px)
+.m-4xl {
+  margin: $spacer-4xl !important;
+}
+
+.mt-4xl {
+  margin-top: $spacer-4xl !important;
+}
+
+.mb-4xl {
+  margin-bottom: $spacer-4xl !important;
+}
+
+.ml-4xl {
+  margin-left: $spacer-4xl !important;
+}
+
+.mr-4xl {
+  margin-right: $spacer-4xl !important;
+}
+
+.mx-4xl {
+  margin-left: $spacer-4xl !important;
+  margin-right: $spacer-4xl !important;
+}
+
+.my-4xl {
+  margin-top: $spacer-4xl !important;
+  margin-bottom: $spacer-4xl !important;
+}
+
+// 5XL (64px)
+.m-5xl {
+  margin: $spacer-5xl !important;
+}
+
+.mt-5xl {
+  margin-top: $spacer-5xl !important;
+}
+
+.mb-5xl {
+  margin-bottom: $spacer-5xl !important;
+}
+
+.ml-5xl {
+  margin-left: $spacer-5xl !important;
+}
+
+.mr-5xl {
+  margin-right: $spacer-5xl !important;
+}
+
+.mx-5xl {
+  margin-left: $spacer-5xl !important;
+  margin-right: $spacer-5xl !important;
+}
+
+.my-5xl {
+  margin-top: $spacer-5xl !important;
+  margin-bottom: $spacer-5xl !important;
+}
+
+// ============================================================================
+// PADDING - TODAS AS DIREÇÕES
+// ============================================================================
+
+// XS (4px)
+.p-xs {
+  padding: $spacer-xs !important;
+}
+
+.pt-xs {
+  padding-top: $spacer-xs !important;
+}
+
+.pb-xs {
+  padding-bottom: $spacer-xs !important;
+}
+
+.pl-xs {
+  padding-left: $spacer-xs !important;
+}
+
+.pr-xs {
+  padding-right: $spacer-xs !important;
+}
+
+.px-xs {
+  padding-left: $spacer-xs !important;
+  padding-right: $spacer-xs !important;
+}
+
+.py-xs {
+  padding-top: $spacer-xs !important;
+  padding-bottom: $spacer-xs !important;
+}
+
+// SM (8px)
+.p-sm {
+  padding: $spacer-sm !important;
+}
+
+.pt-sm {
+  padding-top: $spacer-sm !important;
+}
+
+.pb-sm {
+  padding-bottom: $spacer-sm !important;
+}
+
+.pl-sm {
+  padding-left: $spacer-sm !important;
+}
+
+.pr-sm {
+  padding-right: $spacer-sm !important;
+}
+
+.px-sm {
+  padding-left: $spacer-sm !important;
+  padding-right: $spacer-sm !important;
+}
+
+.py-sm {
+  padding-top: $spacer-sm !important;
+  padding-bottom: $spacer-sm !important;
+}
+
+// LG (24px)
+.p-lg {
+  padding: $spacer-lg !important;
+}
+
+.pt-lg {
+  padding-top: $spacer-lg !important;
+}
+
+.pb-lg {
+  padding-bottom: $spacer-lg !important;
+}
+
+.pl-lg {
+  padding-left: $spacer-lg !important;
+}
+
+.pr-lg {
+  padding-right: $spacer-lg !important;
+}
+
+.px-lg {
+  padding-left: $spacer-lg !important;
+  padding-right: $spacer-lg !important;
+}
+
+.py-lg {
+  padding-top: $spacer-lg !important;
+  padding-bottom: $spacer-lg !important;
+}
+
+// XL (32px)
+.p-xl {
+  padding: $spacer-xl !important;
+}
+
+.pt-xl {
+  padding-top: $spacer-xl !important;
+}
+
+.pb-xl {
+  padding-bottom: $spacer-xl !important;
+}
+
+.pl-xl {
+  padding-left: $spacer-xl !important;
+}
+
+.pr-xl {
+  padding-right: $spacer-xl !important;
+}
+
+.px-xl {
+  padding-left: $spacer-xl !important;
+  padding-right: $spacer-xl !important;
+}
+
+.py-xl {
+  padding-top: $spacer-xl !important;
+  padding-bottom: $spacer-xl !important;
+}
+
+// 2XL (40px)
+.p-2xl {
+  padding: $spacer-2xl !important;
+}
+
+.pt-2xl {
+  padding-top: $spacer-2xl !important;
+}
+
+.pb-2xl {
+  padding-bottom: $spacer-2xl !important;
+}
+
+.pl-2xl {
+  padding-left: $spacer-2xl !important;
+}
+
+.pr-2xl {
+  padding-right: $spacer-2xl !important;
+}
+
+.px-2xl {
+  padding-left: $spacer-2xl !important;
+  padding-right: $spacer-2xl !important;
+}
+
+.py-2xl {
+  padding-top: $spacer-2xl !important;
+  padding-bottom: $spacer-2xl !important;
+}
+
+// 3XL (48px)
+.p-3xl {
+  padding: $spacer-3xl !important;
+}
+
+.pt-3xl {
+  padding-top: $spacer-3xl !important;
+}
+
+.pb-3xl {
+  padding-bottom: $spacer-3xl !important;
+}
+
+.pl-3xl {
+  padding-left: $spacer-3xl !important;
+}
+
+.pr-3xl {
+  padding-right: $spacer-3xl !important;
+}
+
+.px-3xl {
+  padding-left: $spacer-3xl !important;
+  padding-right: $spacer-3xl !important;
+}
+
+.py-3xl {
+  padding-top: $spacer-3xl !important;
+  padding-bottom: $spacer-3xl !important;
+}
+
+// 4XL (56px)
+.p-4xl {
+  padding: $spacer-4xl !important;
+}
+
+.pt-4xl {
+  padding-top: $spacer-4xl !important;
+}
+
+.pb-4xl {
+  padding-bottom: $spacer-4xl !important;
+}
+
+.pl-4xl {
+  padding-left: $spacer-4xl !important;
+}
+
+.pr-4xl {
+  padding-right: $spacer-4xl !important;
+}
+
+.px-4xl {
+  padding-left: $spacer-4xl !important;
+  padding-right: $spacer-4xl !important;
+}
+
+.py-4xl {
+  padding-top: $spacer-4xl !important;
+  padding-bottom: $spacer-4xl !important;
+}
+
+// 5XL (64px)
+.p-5xl {
+  padding: $spacer-5xl !important;
+}
+
+.pt-5xl {
+  padding-top: $spacer-5xl !important;
+}
+
+.pb-5xl {
+  padding-bottom: $spacer-5xl !important;
+}
+
+.pl-5xl {
+  padding-left: $spacer-5xl !important;
+}
+
+.pr-5xl {
+  padding-right: $spacer-5xl !important;
+}
+
+.px-5xl {
+  padding-left: $spacer-5xl !important;
+  padding-right: $spacer-5xl !important;
+}
+
+.py-5xl {
+  padding-top: $spacer-5xl !important;
+  padding-bottom: $spacer-5xl !important;
+}
+
+// ============================================================================
+// GAP - FLEXBOX E GRID
+// ============================================================================
+
+// XS (4px)
+.gap-xs {
+  gap: $spacer-xs !important;
+}
+
+// SM (8px)
+.gap-sm {
+  gap: $spacer-sm !important;
+}
+
+// LG (24px)
+.gap-lg {
+  gap: $spacer-lg !important;
+}
+
+// XL (32px)
+.gap-xl {
+  gap: $spacer-xl !important;
+}
+
+// 2XL (40px)
+.gap-2xl {
+  gap: $spacer-2xl !important;
+}
+
+// 3XL (48px)
+.gap-3xl {
+  gap: $spacer-3xl !important;
+}
+
+// 4XL (56px)
+.gap-4xl {
+  gap: $spacer-4xl !important;
+}
+
+// 5XL (64px)
+.gap-5xl {
+  gap: $spacer-5xl !important;
+}
+
+// ============================================================================
+// COLUMN GAP - GRID
+// ============================================================================
+
+// XS (4px)
+.column-gap-xs {
+  column-gap: $spacer-xs !important;
+}
+
+// SM (8px)
+.column-gap-sm {
+  column-gap: $spacer-sm !important;
+}
+
+// LG (24px)
+.column-gap-lg {
+  column-gap: $spacer-lg !important;
+}
+
+// XL (32px)
+.column-gap-xl {
+  column-gap: $spacer-xl !important;
+}
+
+// 2XL (40px)
+.column-gap-2xl {
+  column-gap: $spacer-2xl !important;
+}
+
+// 3XL (48px)
+.column-gap-3xl {
+  column-gap: $spacer-3xl !important;
+}
+
+// 4XL (56px)
+.column-gap-4xl {
+  column-gap: $spacer-4xl !important;
+}
+
+// 5XL (64px)
+.column-gap-5xl {
+  column-gap: $spacer-5xl !important;
+}
+
+// ============================================================================
+// ROW GAP - GRID
+// ============================================================================
+
+// XS (4px)
+.row-gap-xs {
+  row-gap: $spacer-xs !important;
+}
+
+// SM (8px)
+.row-gap-sm {
+  row-gap: $spacer-sm !important;
+}
+
+// LG (24px)
+.row-gap-lg {
+  row-gap: $spacer-lg !important;
+}
+
+// XL (32px)
+.row-gap-xl {
+  row-gap: $spacer-xl !important;
+}
+
+// 2XL (40px)
+.row-gap-2xl {
+  row-gap: $spacer-2xl !important;
+}
+
+// 3XL (48px)
+.row-gap-3xl {
+  row-gap: $spacer-3xl !important;
+}
+
+// 4XL (56px)
+.row-gap-4xl {
+  row-gap: $spacer-4xl !important;
+}
+
+// 5XL (64px)
+.row-gap-5xl {
+  row-gap: $spacer-5xl !important;
+}
+
+// ============================================================================
+// VARIÁVEIS CSS CUSTOMIZADAS
+// ============================================================================
+
+:root {
+  --bs-spacer-xs: #{$spacer-xs};
+  --bs-spacer-sm: #{$spacer-sm};
+  --bs-spacer-md: #{$spacer-md};
+  --bs-spacer-lg: #{$spacer-lg};
+  --bs-spacer-xl: #{$spacer-xl};
+  --bs-spacer-2xl: #{$spacer-2xl};
+  --bs-spacer-3xl: #{$spacer-3xl};
+  --bs-spacer-4xl: #{$spacer-4xl};
+  --bs-spacer-5xl: #{$spacer-5xl};
+  --bs-spacer-6xl: #{$spacer-6xl};
+  --bs-spacer-7xl: #{$spacer-7xl};
+  --bs-spacer-8xl: #{$spacer-8xl};
+  --bs-spacer-9xl: #{$spacer-9xl};
+  --bs-spacer-10xl: #{$spacer-10xl};
+  --bs-spacer-11xl: #{$spacer-11xl};
+  --bs-spacer-12xl: #{$spacer-12xl};
+}

@@ -8,10 +8,17 @@ import {
   Scripts,
   type ErrorComponentProps,
 } from "@tanstack/react-router";
+import { IonApp } from "@ionic/react";
 import { useEffect, type ReactNode } from "react";
 
+import { AppStateProvider } from "../state/app-state";
+import { ModalProvider } from "../lib/modal";
+import { OverlayProvider } from "../lib/overlay";
+
 import appCss from "../styles.css?url";
+import themeCss from "../theme/global.scss?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import "../lib/ionic";
 
 function NotFoundComponent() {
   return (
@@ -87,13 +94,26 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,900&display=swap",
+      },
       {
         rel: "stylesheet",
         href: appCss,
       },
+      {
+        rel: "stylesheet",
+        href: themeCss,
+      },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
     ],
   }),
+  // O Ionic registra custom elements no `window`, então a árvore inteira é
+  // renderizada apenas no cliente.
+  ssr: false,
   shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
@@ -102,7 +122,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
       <head>
         <HeadContent />
       </head>
@@ -119,8 +139,18 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-      <Outlet />
+      <IonApp>
+        <OverlayProvider>
+          {/* AppStateProvider precisa envolver o ModalProvider: os modais são
+              renderizados como irmãos de `children` e também consomem o estado. */}
+          <AppStateProvider>
+            <ModalProvider>
+              {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
+              <Outlet />
+            </ModalProvider>
+          </AppStateProvider>
+        </OverlayProvider>
+      </IonApp>
     </QueryClientProvider>
   );
 }

@@ -1,0 +1,22 @@
+.nome-linha-onibus {
+  color: var(--ion-color-dark);
+  font-size: 16px;
+}
+.numero-linha-onibus {
+  background: var(--ion-color-primary);
+  color: var(--ion-color-primary-contrast);
+  border-radius: 8px;
+  font-size: 12px;
+  text-align: center;
+  padding: 5px;
+  width: 43px;
+  height: 25px;
+}
+.lista-linha-onibus-item {
+  padding: 16px 0 12px 0;
+  border-bottom: 1px solid #ccc;
+}
+.espaço-search {
+  margin-left: 10px;
+  margin-right: 15px;
+}

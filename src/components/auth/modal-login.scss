@@ -1,0 +1,56 @@
+/* Porte de `pages/auth/modal-login/modal-login.component.scss`. */
+.modal-login {
+  .bg-logo-modal {
+    margin: auto;
+    width: 30%;
+    height: 30%;
+  }
+
+  .label-titulo {
+    color: var(--ion-color-primary);
+    font-weight: 600;
+    font-size: 5vw;
+  }
+
+  .label-descricao {
+    font-size: 4vw;
+    font-weight: 400;
+    margin-top: 12px;
+    color: var(--ion-color-medium);
+  }
+
+  @media only screen and (max-width: 700px) {
+    .switch {
+      zoom: 0.7;
+    }
+  }
+
+  .label-switch {
+    font-size: 13px;
+    color: var(--ion-color-medium);
+  }
+
+  .btn-entrar {
+    height: 12vw;
+    font-size: 4vw;
+    line-height: 53px;
+    font-weight: 600;
+    --border-radius: 0px;
+  }
+
+  .validation-error {
+    font-size: x-small;
+  }
+
+  ion-input.custom {
+    --background: #373737;
+    --color: #fff;
+    --placeholder-color: #ddd;
+    --placeholder-opacity: 0.8;
+
+    --padding-bottom: 10px;
+    --padding-end: 10px;
+    --padding-start: 10px;
+    --padding-top: 10px;
+  }
+}

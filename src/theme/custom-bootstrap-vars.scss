@@ -1,0 +1,160 @@
+// ============================================================================
+// CORES PRIMÁRIAS - BASEADAS NO TEMA IONIC
+// ============================================================================
+
+$primary: #211551;
+$secondary: #0062cc;
+$tertiary: #5260ff;
+$success: #0a8549;
+$danger: #fa1818;
+$warning: #eeee22;
+$info: #0062cc;
+$light: #dddddd;
+$dark: #000000;
+
+// ============================================================================
+// CORES ADICIONAIS - BUSPAY ESPECÍFICAS
+// ============================================================================
+
+$gray-text: #575757;
+$gray-disabled: #dddddd;
+$gray-light-bg: #f8f5f5;
+$gray-labels: #29282c;
+$gray-border: #949494;
+
+$buspay-orange: #fe891e;
+$buspay-yellow: #eeee22;
+
+$color-comum: #5c2e91;
+$color-vt: #0355ab;
+$color-estudante: #b95b01;
+
+$color-progress-success: #0a8549;
+$color-progress-warning: #ff7c00;
+$color-tab: #e5e5e5;
+$color-grey-header: #f9f8f8;
+$bp-placeholder-color: #e5e5e5;
+$color-btn-cancel: #fff;
+
+// ============================================================================
+// ESCALA DE CINZA CUSTOMIZADA
+// ============================================================================
+
+$grays: (
+  '100': #f8f5f5,
+  '200': #f1eded,
+  '300': #e5e5e5,
+  '400': #d7d8da,
+  '500': #c9c9c9,
+  '600': #949494,
+  '700': #575757,
+  '800': #29282c,
+  '900': #1e2023,
+);
+
+$gray-100: map-get($grays, '100');
+$gray-200: map-get($grays, '200');
+$gray-300: map-get($grays, '300');
+$gray-400: map-get($grays, '400');
+$gray-500: map-get($grays, '500');
+$gray-600: map-get($grays, '600');
+$gray-700: map-get($grays, '700');
+$gray-800: map-get($grays, '800');
+$gray-900: map-get($grays, '900');
+
+// ============================================================================
+// CUSTOMIZAÇÕES DE COMPONENTES
+// ============================================================================
+
+// Backgrounds
+$body-bg: #ffffff;
+$body-color: $gray-text;
+
+// Borders
+$border-color: $gray-border;
+$border-color-translucent: rgba($gray-border, 0.1);
+
+// Links
+$link-color: $secondary;
+$link-hover-color: darken($secondary, 15%);
+
+// Inputs
+$input-bg: #ffffff;
+$input-border-color: $gray-border;
+$input-placeholder-color: $bp-placeholder-color;
+$input-focus-border-color: $secondary;
+$input-focus-box-shadow: 0 0 0 0.2rem rgba($secondary, 0.25);
+
+// Buttons
+$btn-close-focus-shadow: 0 0 0 0.25rem rgba($secondary, 0.25);
+
+// Alerts
+$alert-bg-scale: -80%;
+$alert-border-scale: -70%;
+$alert-color-scale: 40%;
+
+// Cards
+$card-bg: #ffffff;
+$card-border-color: $gray-border;
+
+// Modals
+$modal-header-bg: $color-grey-header;
+$modal-header-border-color: $gray-border;
+
+// Navs
+$nav-link-color: $gray-text;
+$nav-link-hover-color: $secondary;
+$nav-tabs-link-active-color: $secondary;
+$nav-tabs-link-active-border-color: $secondary;
+
+// Pagination
+$pagination-color: $gray-text;
+$pagination-hover-color: $secondary;
+$pagination-active-bg: $secondary;
+$pagination-active-border-color: $secondary;
+
+// Badges
+$badge-padding-y: 0.35em;
+$badge-padding-x: 0.65em;
+
+// Progress
+$progress-bg: $gray-300;
+$progress-bar-bg: $success;
+
+// Tables
+$table-border-color: $gray-border;
+$table-hover-bg: rgba($secondary, 0.05);
+
+// Breadcrumbs
+$breadcrumb-padding-y: 0.5rem;
+$breadcrumb-padding-x: 0;
+$breadcrumb-margin-bottom: 1rem;
+$breadcrumb-divider-color: $gray-border;
+$breadcrumb-active-color: $gray-text;
+
+// List groups
+$list-group-border-color: $gray-border;
+$list-group-hover-bg: rgba($secondary, 0.05);
+$list-group-active-bg: $secondary;
+$list-group-active-border-color: $secondary;
+
+// Dropdowns
+$dropdown-link-color: $gray-text;
+$dropdown-link-hover-color: $secondary;
+$dropdown-link-hover-bg: rgba($secondary, 0.05);
+$dropdown-link-active-color: $secondary;
+$dropdown-link-active-bg: rgba($secondary, 0.1);
+
+// Tooltips
+$tooltip-bg: rgba($dark, 0.9);
+$tooltip-opacity: 1;
+
+// Popovers
+$popover-bg: #ffffff;
+$popover-border-color: $gray-border;
+$popover-header-bg: $color-grey-header;
+$popover-header-border-color: $gray-border;
+
+// Spinners
+$spinner-border-color: $gray-300;
+$spinner-border-color-light: $gray-200;

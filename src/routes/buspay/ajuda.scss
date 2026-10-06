@@ -1,0 +1,41 @@
+.ajuda-title {
+  color: var(--ion-color-primary);
+}
+.ajuda-subtitle {
+  font-size: 0.875rem;
+  color: var(--ion-color-dark);
+}
+.ajuda-subtitle-padding {
+  padding-left: 30px;
+  padding-top: 20px;
+}
+.ajuda-header-bg {
+  --background: white !important;
+}
+.ajuda-perguntas-titulo {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--BUSPAY-CINZA-CLARO-LABELS-TITULO);
+}
+.ajuda-perguntas-categoria,
+.ajuda-categoria-sub {
+  font-size: 12px;
+  color: var(--BUSPAY-CINZA-CLARO-LABELS-TITULO);
+}
+.ajuda-categoria-titulo {
+  font-size: 14px;
+  margin-top: 10px;
+  font-weight: 600;
+  color: var(--BUSPAY-CINZA-CLARO-LABELS-TITULO);
+}
+.ajuda-btn-text {
+  font-weight: 500;
+  font-size: 13px;
+  color: white;
+  text-align: center;
+}
+.ajuda-icon {
+  width: 22px;
+  height: 19px;
+  margin: 10px;
+}

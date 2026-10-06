@@ -1,0 +1,40 @@
+.alert-title {
+  font-weight: bold;
+  text-align: center;
+}
+
+.alert-sub-titulo {
+  color: var(--ion-color-medium);
+  font-family: "Poppins";
+  font-size: 14px;
+  font-style: normal;
+  text-align: center;
+}
+
+.bg-logo {
+  margin-top: 15px;
+  justify-content: center;
+}
+
+.logo-ion-img {
+  display: block;
+  margin-top: 15px;
+  width: 30%;
+  height: 30%;
+}
+
+.alert-ion-img {
+  display: block;
+  width: 50%;
+  height: 100%;
+  margin: auto;
+}
+
+.bp-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: calc(100vh - 25%);
+  max-width: 400px;
+  margin: auto;
+}

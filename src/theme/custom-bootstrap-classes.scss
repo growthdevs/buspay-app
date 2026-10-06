@@ -1,0 +1,375 @@
+// ============================================================================
+// VARIÁVEIS LOCAIS (Repetidas para referência)
+// ============================================================================
+
+$color-comum: #5c2e91;
+$color-vt: #0355ab;
+$color-estudante: #b95b01;
+$buspay-orange: #fe891e;
+$buspay-yellow: #eeee22;
+
+$grays: (
+  '100': #f8f5f5,
+  '200': #f1eded,
+  '300': #e5e5e5,
+  '400': #d7d8da,
+  '500': #c9c9c9,
+  '600': #949494,
+  '700': #575757,
+  '800': #29282c,
+  '900': #1e2023,
+);
+
+// ============================================================================
+// BOTÕES CUSTOMIZADOS - CARTEIRA COMUM
+// ============================================================================
+
+.btn-comum {
+  @include button-variant($color-comum, $color-comum);
+}
+
+.btn-outline-comum {
+  @include button-outline-variant($color-comum);
+}
+
+// ============================================================================
+// BOTÕES CUSTOMIZADOS - VALE TRANSPORTE
+// ============================================================================
+
+.btn-vt {
+  @include button-variant($color-vt, $color-vt);
+}
+
+.btn-outline-vt {
+  @include button-outline-variant($color-vt);
+}
+
+// ============================================================================
+// BOTÕES CUSTOMIZADOS - CARTEIRA ESTUDANTE
+// ============================================================================
+
+.btn-estudante {
+  @include button-variant($color-estudante, $color-estudante);
+}
+
+.btn-outline-estudante {
+  @include button-outline-variant($color-estudante);
+}
+
+// ============================================================================
+// BOTÕES CUSTOMIZADOS - LARANJA
+// ============================================================================
+
+.btn-orange {
+  @include button-variant($buspay-orange, $buspay-orange);
+}
+
+.btn-outline-orange {
+  @include button-outline-variant($buspay-orange);
+}
+
+// ============================================================================
+// BOTÕES CUSTOMIZADOS - AMARELO
+// ============================================================================
+
+.btn-yellow {
+  @include button-variant($buspay-yellow, $buspay-yellow);
+}
+
+.btn-outline-yellow {
+  @include button-outline-variant($buspay-yellow);
+}
+
+// ============================================================================
+// CLASSES DE BACKGROUND - CARTEIRA COMUM
+// ============================================================================
+
+.bg-comum {
+  background-color: $color-comum !important;
+}
+
+.bg-comum-light {
+  background-color: lighten($color-comum, 10%) !important;
+}
+
+.bg-comum-dark {
+  background-color: darken($color-comum, 10%) !important;
+}
+
+// ============================================================================
+// CLASSES DE BACKGROUND - VALE TRANSPORTE
+// ============================================================================
+
+.bg-vt {
+  background-color: $color-vt !important;
+}
+
+.bg-vt-light {
+  background-color: lighten($color-vt, 10%) !important;
+}
+
+.bg-vt-dark {
+  background-color: darken($color-vt, 10%) !important;
+}
+
+// ============================================================================
+// CLASSES DE BACKGROUND - CARTEIRA ESTUDANTE
+// ============================================================================
+
+.bg-estudante {
+  background-color: $color-estudante !important;
+}
+
+.bg-estudante-light {
+  background-color: lighten($color-estudante, 10%) !important;
+}
+
+.bg-estudante-dark {
+  background-color: darken($color-estudante, 10%) !important;
+}
+
+// ============================================================================
+// CLASSES DE BACKGROUND - LARANJA
+// ============================================================================
+
+.bg-orange {
+  background-color: $buspay-orange !important;
+}
+
+.bg-orange-light {
+  background-color: lighten($buspay-orange, 10%) !important;
+}
+
+.bg-orange-dark {
+  background-color: darken($buspay-orange, 10%) !important;
+}
+
+// ============================================================================
+// CLASSES DE BACKGROUND - AMARELO
+// ============================================================================
+
+.bg-yellow {
+  background-color: $buspay-yellow !important;
+}
+
+.bg-yellow-light {
+  background-color: lighten($buspay-yellow, 10%) !important;
+}
+
+.bg-yellow-dark {
+  background-color: darken($buspay-yellow, 10%) !important;
+}
+
+// ============================================================================
+// CLASSES DE TEXTO - CARTEIRA COMUM
+// ============================================================================
+
+.text-comum {
+  color: $color-comum !important;
+}
+
+.text-comum-light {
+  color: lighten($color-comum, 10%) !important;
+}
+
+.text-comum-dark {
+  color: darken($color-comum, 10%) !important;
+}
+
+// ============================================================================
+// CLASSES DE TEXTO - VALE TRANSPORTE
+// ============================================================================
+
+.text-vt {
+  color: $color-vt !important;
+}
+
+.text-vt-light {
+  color: lighten($color-vt, 10%) !important;
+}
+
+.text-vt-dark {
+  color: darken($color-vt, 10%) !important;
+}
+
+// ============================================================================
+// CLASSES DE TEXTO - CARTEIRA ESTUDANTE
+// ============================================================================
+
+.text-estudante {
+  color: $color-estudante !important;
+}
+
+.text-estudante-light {
+  color: lighten($color-estudante, 10%) !important;
+}
+
+.text-estudante-dark {
+  color: darken($color-estudante, 10%) !important;
+}
+
+// ============================================================================
+// CLASSES DE TEXTO - LARANJA
+// ============================================================================
+
+.text-orange {
+  color: $buspay-orange !important;
+}
+
+.text-orange-light {
+  color: lighten($buspay-orange, 10%) !important;
+}
+
+.text-orange-dark {
+  color: darken($buspay-orange, 10%) !important;
+}
+
+// ============================================================================
+// CLASSES DE TEXTO - AMARELO
+// ============================================================================
+
+.text-yellow {
+  color: $buspay-yellow !important;
+}
+
+.text-yellow-light {
+  color: lighten($buspay-yellow, 10%) !important;
+}
+
+.text-yellow-dark {
+  color: darken($buspay-yellow, 10%) !important;
+}
+
+// ============================================================================
+// CLASSES DE BORDER - CARTEIRA COMUM
+// ============================================================================
+
+.border-comum {
+  border-color: $color-comum !important;
+}
+
+.border-comum-light {
+  border-color: lighten($color-comum, 10%) !important;
+}
+
+.border-comum-dark {
+  border-color: darken($color-comum, 10%) !important;
+}
+
+// ============================================================================
+// CLASSES DE BORDER - VALE TRANSPORTE
+// ============================================================================
+
+.border-vt {
+  border-color: $color-vt !important;
+}
+
+.border-vt-light {
+  border-color: lighten($color-vt, 10%) !important;
+}
+
+.border-vt-dark {
+  border-color: darken($color-vt, 10%) !important;
+}
+
+// ============================================================================
+// CLASSES DE BORDER - CARTEIRA ESTUDANTE
+// ============================================================================
+
+.border-estudante {
+  border-color: $color-estudante !important;
+}
+
+.border-estudante-light {
+  border-color: lighten($color-estudante, 10%) !important;
+}
+
+.border-estudante-dark {
+  border-color: darken($color-estudante, 10%) !important;
+}
+
+// ============================================================================
+// CLASSES DE BORDER - LARANJA
+// ============================================================================
+
+.border-orange {
+  border-color: $buspay-orange !important;
+}
+
+.border-orange-light {
+  border-color: lighten($buspay-orange, 10%) !important;
+}
+
+.border-orange-dark {
+  border-color: darken($buspay-orange, 10%) !important;
+}
+
+// ============================================================================
+// CLASSES DE BORDER - AMARELO
+// ============================================================================
+
+.border-yellow {
+  border-color: $buspay-yellow !important;
+}
+
+.border-yellow-light {
+  border-color: lighten($buspay-yellow, 10%) !important;
+}
+
+.border-yellow-dark {
+  border-color: darken($buspay-yellow, 10%) !important;
+}
+
+// ============================================================================
+// CLASSES DE CINZA - BACKGROUNDS
+// ============================================================================
+
+@each $color, $value in $grays {
+  .bg-gray-#{$color} {
+    background-color: $value !important;
+  }
+}
+
+// ============================================================================
+// CLASSES DE CINZA - TEXTOS
+// ============================================================================
+
+@each $color, $value in $grays {
+  .text-gray-#{$color} {
+    color: $value !important;
+  }
+}
+
+// ============================================================================
+// CLASSES DE CINZA - BORDERS
+// ============================================================================
+
+@each $color, $value in $grays {
+  .border-gray-#{$color} {
+    border-color: $value !important;
+  }
+}
+
+// ============================================================================
+// VARIÁVEIS CSS CUSTOMIZADAS (Para compatibilidade com Ionic)
+// ============================================================================
+
+:root {
+  // BusPay Specific
+  --bs-comum: #{$color-comum};
+  --bs-vt: #{$color-vt};
+  --bs-estudante: #{$color-estudante};
+  --bs-orange: #{$buspay-orange};
+  --bs-yellow: #{$buspay-yellow};
+
+  // Grays
+  --bs-gray-100: #{map-get($grays, '100')};
+  --bs-gray-200: #{map-get($grays, '200')};
+  --bs-gray-300: #{map-get($grays, '300')};
+  --bs-gray-400: #{map-get($grays, '400')};
+  --bs-gray-500: #{map-get($grays, '500')};
+  --bs-gray-600: #{map-get($grays, '600')};
+  --bs-gray-700: #{map-get($grays, '700')};
+  --bs-gray-800: #{map-get($grays, '800')};
+  --bs-gray-900: #{map-get($grays, '900')};
+}

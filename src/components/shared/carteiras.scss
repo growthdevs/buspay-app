@@ -1,0 +1,82 @@
+.carteira-p {
+  font-size: 12px;
+  font-family: Poppins;
+  font-style: normal;
+  margin-bottom: 0.5rem;
+  margin-left: 12px;
+  margin-top: 12px;
+  margin-right: 12px;
+}
+
+.saldo {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-left: 12px;
+}
+
+.carteira-slide-1 {
+  border-radius: 10px !important;
+  background: #4a2277 !important;
+  color: #ffffff;
+}
+
+.carteira-slide-2 {
+  border-radius: 10px;
+  background: #411aeb !important;
+  color: #ffffff;
+}
+
+.carteira-slide-3 {
+  border-radius: 10px;
+  background: #1d6979 !important;
+  color: #ffffff;
+}
+
+.carteira-slide-4 {
+  border-radius: 10px;
+  background: #f5f5f5 !important;
+  color: grey !important;
+}
+
+.btn-quadrado {
+  width: 40px;
+  height: 40px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+.btn-quadrado-ativo {
+  border-radius: 2px !important;
+  border: 3px solid;
+  border-color: #147eff;
+}
+
+.btn-quadrado-inativo {
+  border-radius: 2px !important;
+  border: 3px solid;
+  border-color: white !important;
+  opacity: 50%;
+}
+
+.btn-recarga {
+  --border-color: white;
+  --color: white;
+  --border-width: 1px;
+  --border-style: solid;
+  --background: transparent !important;
+  --box-shadow: none;
+  font-size: 11px;
+}
+
+.btn-dependentes {
+  --box-shadow: none;
+  font-size: small;
+}
+
+.swiper-carteiras .swiper-slide {
+  height: auto;
+}

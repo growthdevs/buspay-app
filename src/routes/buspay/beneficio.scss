@@ -1,0 +1,36 @@
+.beneficio-card {
+  padding: 0 14px;
+  background: #fff;
+  cursor: pointer;
+}
+.beneficio-badge {
+  padding: 0.6rem 0.9rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+.badge-ativo,
+.badge-aprovado {
+  color: #04341d;
+  background: #ecfef5;
+}
+.badge-expirado,
+.badge-em-analise {
+  color: #4e2500;
+  background: #fff9f5;
+}
+.badge-reprovado {
+  color: #4e2500;
+  background: #fff2f2;
+}
+.beneficio-btn-align {
+  margin-top: 30px;
+  justify-content: center;
+}
+.img-status {
+  width: 24px;
+  height: 24px;
+}
+.text-obervacao {
+  text-align: center;
+  font-size: 12px;
+}

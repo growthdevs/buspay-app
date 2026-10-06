@@ -1,0 +1,86 @@
+/*
+ * Porte de `pages/auth/auth.page.scss`. As regras ficam aninhadas em
+ * `.page-auth` para reproduzir o encapsulamento de estilos do Angular.
+ */
+.page-auth {
+  .card-bottom {
+    position: absolute;
+    bottom: env(safe-area-inset-bottom);
+    width: 100%;
+  }
+
+  .bg-logo-align {
+    justify-content: center;
+  }
+
+  .bg-logo {
+    margin-top: 15px;
+    width: 30%;
+    height: 30%;
+  }
+
+  .img-cx {
+    width: 77px;
+    height: 177px;
+    object-fit: inherit;
+    object-position: inherit;
+    display: block;
+  }
+
+  .bg-text {
+    margin-right: -100px;
+  }
+
+  .text-title {
+    font-size: 24px;
+    margin-left: 2px;
+    margin-top: 20%;
+    margin-bottom: 10px !important;
+  }
+
+  .text-sub {
+    font-size: 16px;
+    margin-left: 3px;
+    color: #ffff;
+    font-weight: bold;
+    margin-bottom: 10px !important;
+  }
+
+  .bg-cx {
+    margin-top: 30px;
+    margin-right: 10px;
+    text-align: -webkit-right;
+    width: 77px;
+    height: 177px;
+  }
+
+  .esqueciMinhaSenha {
+    display: block;
+    margin: auto;
+    text-decoration: underline;
+    color: var(--ion-color-medium);
+  }
+
+  .btn-comece-agora {
+    height: 12vw;
+    font-size: 4vw;
+    line-height: 53px;
+    font-weight: 600;
+    --border-radius: 0px;
+  }
+
+  .txt-mensagem-promo {
+    background: var(--warning);
+    color: var(--ion-color-primary);
+    font-size: 7vw;
+    padding: 8px;
+    font-weight: 400;
+  }
+
+  .txt-aviso-promo {
+    color: white;
+    font-size: 3vw;
+    font-weight: 400;
+    line-height: 24px;
+  }
+}

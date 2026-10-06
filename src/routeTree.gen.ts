@@ -10,33 +10,284 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as BuspayRouteRouteImport } from './routes/buspay/route'
+import { Route as FotoDocumentoIdentificacaoRouteImport } from './routes/foto-documento-identificacao'
+import { Route as SolicitarDesbloqueioVtRouteImport } from './routes/solicitar-desbloqueio-vt'
+import { Route as TirarSelfieRouteImport } from './routes/tirar-selfie'
+import { Route as AuthIndexRouteImport } from './routes/auth/index'
+import { Route as AuthCadastroInicialRouteImport } from './routes/auth/cadastro-inicial'
+import { Route as AuthRecuperarSenhaRouteImport } from './routes/auth/recuperar-senha'
+import { Route as BuspayIndexRouteImport } from './routes/buspay/index'
+import { Route as BuspayAjudaRouteImport } from './routes/buspay/ajuda'
+import { Route as BuspayBeneficioRouteImport } from './routes/buspay/beneficio'
+import { Route as BuspayDependentesRouteImport } from './routes/buspay/dependentes'
+import { Route as BuspayExtratoRouteImport } from './routes/buspay/extrato'
+import { Route as BuspayHomeRouteImport } from './routes/buspay/home'
+import { Route as BuspayLocalizarOnibusRouteImport } from './routes/buspay/localizar-onibus'
+import { Route as BuspayNovaSolicitacaoBeneficioRouteImport } from './routes/buspay/nova-solicitacao-beneficio'
+import { Route as BuspayPerfilRouteImport } from './routes/buspay/perfil'
+import { Route as BuspayPontosDeRecargaRouteImport } from './routes/buspay/pontos-de-recarga'
+import { Route as BuspayRecargaRouteImport } from './routes/buspay/recarga'
+import { Route as BuspaySolicitacoesVtRouteImport } from './routes/buspay/solicitacoes-vt'
+import { Route as BuspayTarifasRouteImport } from './routes/buspay/tarifas'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BuspayRouteRoute = BuspayRouteRouteImport.update({
+  id: '/buspay',
+  path: '/buspay',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FotoDocumentoIdentificacaoRoute =
+  FotoDocumentoIdentificacaoRouteImport.update({
+    id: '/foto-documento-identificacao',
+    path: '/foto-documento-identificacao',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const SolicitarDesbloqueioVtRoute = SolicitarDesbloqueioVtRouteImport.update({
+  id: '/solicitar-desbloqueio-vt',
+  path: '/solicitar-desbloqueio-vt',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TirarSelfieRoute = TirarSelfieRouteImport.update({
+  id: '/tirar-selfie',
+  path: '/tirar-selfie',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AuthIndexRoute = AuthIndexRouteImport.update({
+  id: '/auth/',
+  path: '/auth/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AuthCadastroInicialRoute = AuthCadastroInicialRouteImport.update({
+  id: '/auth/cadastro-inicial',
+  path: '/auth/cadastro-inicial',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AuthRecuperarSenhaRoute = AuthRecuperarSenhaRouteImport.update({
+  id: '/auth/recuperar-senha',
+  path: '/auth/recuperar-senha',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BuspayIndexRoute = BuspayIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => BuspayRouteRoute,
+} as any)
+const BuspayAjudaRoute = BuspayAjudaRouteImport.update({
+  id: '/ajuda',
+  path: '/ajuda',
+  getParentRoute: () => BuspayRouteRoute,
+} as any)
+const BuspayBeneficioRoute = BuspayBeneficioRouteImport.update({
+  id: '/beneficio',
+  path: '/beneficio',
+  getParentRoute: () => BuspayRouteRoute,
+} as any)
+const BuspayDependentesRoute = BuspayDependentesRouteImport.update({
+  id: '/dependentes',
+  path: '/dependentes',
+  getParentRoute: () => BuspayRouteRoute,
+} as any)
+const BuspayExtratoRoute = BuspayExtratoRouteImport.update({
+  id: '/extrato',
+  path: '/extrato',
+  getParentRoute: () => BuspayRouteRoute,
+} as any)
+const BuspayHomeRoute = BuspayHomeRouteImport.update({
+  id: '/home',
+  path: '/home',
+  getParentRoute: () => BuspayRouteRoute,
+} as any)
+const BuspayLocalizarOnibusRoute = BuspayLocalizarOnibusRouteImport.update({
+  id: '/localizar-onibus',
+  path: '/localizar-onibus',
+  getParentRoute: () => BuspayRouteRoute,
+} as any)
+const BuspayNovaSolicitacaoBeneficioRoute =
+  BuspayNovaSolicitacaoBeneficioRouteImport.update({
+    id: '/nova-solicitacao-beneficio',
+    path: '/nova-solicitacao-beneficio',
+    getParentRoute: () => BuspayRouteRoute,
+  } as any)
+const BuspayPerfilRoute = BuspayPerfilRouteImport.update({
+  id: '/perfil',
+  path: '/perfil',
+  getParentRoute: () => BuspayRouteRoute,
+} as any)
+const BuspayPontosDeRecargaRoute = BuspayPontosDeRecargaRouteImport.update({
+  id: '/pontos-de-recarga',
+  path: '/pontos-de-recarga',
+  getParentRoute: () => BuspayRouteRoute,
+} as any)
+const BuspayRecargaRoute = BuspayRecargaRouteImport.update({
+  id: '/recarga',
+  path: '/recarga',
+  getParentRoute: () => BuspayRouteRoute,
+} as any)
+const BuspaySolicitacoesVtRoute = BuspaySolicitacoesVtRouteImport.update({
+  id: '/solicitacoes-vt',
+  path: '/solicitacoes-vt',
+  getParentRoute: () => BuspayRouteRoute,
+} as any)
+const BuspayTarifasRoute = BuspayTarifasRouteImport.update({
+  id: '/tarifas',
+  path: '/tarifas',
+  getParentRoute: () => BuspayRouteRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/buspay': typeof BuspayRouteRouteWithChildren
+  '/foto-documento-identificacao': typeof FotoDocumentoIdentificacaoRoute
+  '/solicitar-desbloqueio-vt': typeof SolicitarDesbloqueioVtRoute
+  '/tirar-selfie': typeof TirarSelfieRoute
+  '/auth/cadastro-inicial': typeof AuthCadastroInicialRoute
+  '/auth/recuperar-senha': typeof AuthRecuperarSenhaRoute
+  '/buspay/ajuda': typeof BuspayAjudaRoute
+  '/buspay/beneficio': typeof BuspayBeneficioRoute
+  '/buspay/dependentes': typeof BuspayDependentesRoute
+  '/buspay/extrato': typeof BuspayExtratoRoute
+  '/buspay/home': typeof BuspayHomeRoute
+  '/buspay/localizar-onibus': typeof BuspayLocalizarOnibusRoute
+  '/buspay/nova-solicitacao-beneficio': typeof BuspayNovaSolicitacaoBeneficioRoute
+  '/buspay/perfil': typeof BuspayPerfilRoute
+  '/buspay/pontos-de-recarga': typeof BuspayPontosDeRecargaRoute
+  '/buspay/recarga': typeof BuspayRecargaRoute
+  '/buspay/solicitacoes-vt': typeof BuspaySolicitacoesVtRoute
+  '/buspay/tarifas': typeof BuspayTarifasRoute
+  '/auth/': typeof AuthIndexRoute
+  '/buspay/': typeof BuspayIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/foto-documento-identificacao': typeof FotoDocumentoIdentificacaoRoute
+  '/solicitar-desbloqueio-vt': typeof SolicitarDesbloqueioVtRoute
+  '/tirar-selfie': typeof TirarSelfieRoute
+  '/auth/cadastro-inicial': typeof AuthCadastroInicialRoute
+  '/auth/recuperar-senha': typeof AuthRecuperarSenhaRoute
+  '/buspay/ajuda': typeof BuspayAjudaRoute
+  '/buspay/beneficio': typeof BuspayBeneficioRoute
+  '/buspay/dependentes': typeof BuspayDependentesRoute
+  '/buspay/extrato': typeof BuspayExtratoRoute
+  '/buspay/home': typeof BuspayHomeRoute
+  '/buspay/localizar-onibus': typeof BuspayLocalizarOnibusRoute
+  '/buspay/nova-solicitacao-beneficio': typeof BuspayNovaSolicitacaoBeneficioRoute
+  '/buspay/perfil': typeof BuspayPerfilRoute
+  '/buspay/pontos-de-recarga': typeof BuspayPontosDeRecargaRoute
+  '/buspay/recarga': typeof BuspayRecargaRoute
+  '/buspay/solicitacoes-vt': typeof BuspaySolicitacoesVtRoute
+  '/buspay/tarifas': typeof BuspayTarifasRoute
+  '/auth': typeof AuthIndexRoute
+  '/buspay': typeof BuspayIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/buspay': typeof BuspayRouteRouteWithChildren
+  '/foto-documento-identificacao': typeof FotoDocumentoIdentificacaoRoute
+  '/solicitar-desbloqueio-vt': typeof SolicitarDesbloqueioVtRoute
+  '/tirar-selfie': typeof TirarSelfieRoute
+  '/auth/cadastro-inicial': typeof AuthCadastroInicialRoute
+  '/auth/recuperar-senha': typeof AuthRecuperarSenhaRoute
+  '/buspay/ajuda': typeof BuspayAjudaRoute
+  '/buspay/beneficio': typeof BuspayBeneficioRoute
+  '/buspay/dependentes': typeof BuspayDependentesRoute
+  '/buspay/extrato': typeof BuspayExtratoRoute
+  '/buspay/home': typeof BuspayHomeRoute
+  '/buspay/localizar-onibus': typeof BuspayLocalizarOnibusRoute
+  '/buspay/nova-solicitacao-beneficio': typeof BuspayNovaSolicitacaoBeneficioRoute
+  '/buspay/perfil': typeof BuspayPerfilRoute
+  '/buspay/pontos-de-recarga': typeof BuspayPontosDeRecargaRoute
+  '/buspay/recarga': typeof BuspayRecargaRoute
+  '/buspay/solicitacoes-vt': typeof BuspaySolicitacoesVtRoute
+  '/buspay/tarifas': typeof BuspayTarifasRoute
+  '/auth/': typeof AuthIndexRoute
+  '/buspay/': typeof BuspayIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/buspay'
+    | '/foto-documento-identificacao'
+    | '/solicitar-desbloqueio-vt'
+    | '/tirar-selfie'
+    | '/auth/cadastro-inicial'
+    | '/auth/recuperar-senha'
+    | '/buspay/ajuda'
+    | '/buspay/beneficio'
+    | '/buspay/dependentes'
+    | '/buspay/extrato'
+    | '/buspay/home'
+    | '/buspay/localizar-onibus'
+    | '/buspay/nova-solicitacao-beneficio'
+    | '/buspay/perfil'
+    | '/buspay/pontos-de-recarga'
+    | '/buspay/recarga'
+    | '/buspay/solicitacoes-vt'
+    | '/buspay/tarifas'
+    | '/auth/'
+    | '/buspay/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/foto-documento-identificacao'
+    | '/solicitar-desbloqueio-vt'
+    | '/tirar-selfie'
+    | '/auth/cadastro-inicial'
+    | '/auth/recuperar-senha'
+    | '/buspay/ajuda'
+    | '/buspay/beneficio'
+    | '/buspay/dependentes'
+    | '/buspay/extrato'
+    | '/buspay/home'
+    | '/buspay/localizar-onibus'
+    | '/buspay/nova-solicitacao-beneficio'
+    | '/buspay/perfil'
+    | '/buspay/pontos-de-recarga'
+    | '/buspay/recarga'
+    | '/buspay/solicitacoes-vt'
+    | '/buspay/tarifas'
+    | '/auth'
+    | '/buspay'
+  id:
+    | '__root__'
+    | '/'
+    | '/buspay'
+    | '/foto-documento-identificacao'
+    | '/solicitar-desbloqueio-vt'
+    | '/tirar-selfie'
+    | '/auth/cadastro-inicial'
+    | '/auth/recuperar-senha'
+    | '/buspay/ajuda'
+    | '/buspay/beneficio'
+    | '/buspay/dependentes'
+    | '/buspay/extrato'
+    | '/buspay/home'
+    | '/buspay/localizar-onibus'
+    | '/buspay/nova-solicitacao-beneficio'
+    | '/buspay/perfil'
+    | '/buspay/pontos-de-recarga'
+    | '/buspay/recarga'
+    | '/buspay/solicitacoes-vt'
+    | '/buspay/tarifas'
+    | '/auth/'
+    | '/buspay/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  BuspayRouteRoute: typeof BuspayRouteRouteWithChildren
+  FotoDocumentoIdentificacaoRoute: typeof FotoDocumentoIdentificacaoRoute
+  SolicitarDesbloqueioVtRoute: typeof SolicitarDesbloqueioVtRoute
+  TirarSelfieRoute: typeof TirarSelfieRoute
+  AuthCadastroInicialRoute: typeof AuthCadastroInicialRoute
+  AuthRecuperarSenhaRoute: typeof AuthRecuperarSenhaRoute
+  AuthIndexRoute: typeof AuthIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +299,194 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/buspay': {
+      id: '/buspay'
+      path: '/buspay'
+      fullPath: '/buspay'
+      preLoaderRoute: typeof BuspayRouteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/foto-documento-identificacao': {
+      id: '/foto-documento-identificacao'
+      path: '/foto-documento-identificacao'
+      fullPath: '/foto-documento-identificacao'
+      preLoaderRoute: typeof FotoDocumentoIdentificacaoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/solicitar-desbloqueio-vt': {
+      id: '/solicitar-desbloqueio-vt'
+      path: '/solicitar-desbloqueio-vt'
+      fullPath: '/solicitar-desbloqueio-vt'
+      preLoaderRoute: typeof SolicitarDesbloqueioVtRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tirar-selfie': {
+      id: '/tirar-selfie'
+      path: '/tirar-selfie'
+      fullPath: '/tirar-selfie'
+      preLoaderRoute: typeof TirarSelfieRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/auth/': {
+      id: '/auth/'
+      path: '/auth'
+      fullPath: '/auth/'
+      preLoaderRoute: typeof AuthIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/auth/cadastro-inicial': {
+      id: '/auth/cadastro-inicial'
+      path: '/auth/cadastro-inicial'
+      fullPath: '/auth/cadastro-inicial'
+      preLoaderRoute: typeof AuthCadastroInicialRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/auth/recuperar-senha': {
+      id: '/auth/recuperar-senha'
+      path: '/auth/recuperar-senha'
+      fullPath: '/auth/recuperar-senha'
+      preLoaderRoute: typeof AuthRecuperarSenhaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/buspay/': {
+      id: '/buspay/'
+      path: '/'
+      fullPath: '/buspay/'
+      preLoaderRoute: typeof BuspayIndexRouteImport
+      parentRoute: typeof BuspayRouteRoute
+    }
+    '/buspay/ajuda': {
+      id: '/buspay/ajuda'
+      path: '/ajuda'
+      fullPath: '/buspay/ajuda'
+      preLoaderRoute: typeof BuspayAjudaRouteImport
+      parentRoute: typeof BuspayRouteRoute
+    }
+    '/buspay/beneficio': {
+      id: '/buspay/beneficio'
+      path: '/beneficio'
+      fullPath: '/buspay/beneficio'
+      preLoaderRoute: typeof BuspayBeneficioRouteImport
+      parentRoute: typeof BuspayRouteRoute
+    }
+    '/buspay/dependentes': {
+      id: '/buspay/dependentes'
+      path: '/dependentes'
+      fullPath: '/buspay/dependentes'
+      preLoaderRoute: typeof BuspayDependentesRouteImport
+      parentRoute: typeof BuspayRouteRoute
+    }
+    '/buspay/extrato': {
+      id: '/buspay/extrato'
+      path: '/extrato'
+      fullPath: '/buspay/extrato'
+      preLoaderRoute: typeof BuspayExtratoRouteImport
+      parentRoute: typeof BuspayRouteRoute
+    }
+    '/buspay/home': {
+      id: '/buspay/home'
+      path: '/home'
+      fullPath: '/buspay/home'
+      preLoaderRoute: typeof BuspayHomeRouteImport
+      parentRoute: typeof BuspayRouteRoute
+    }
+    '/buspay/localizar-onibus': {
+      id: '/buspay/localizar-onibus'
+      path: '/localizar-onibus'
+      fullPath: '/buspay/localizar-onibus'
+      preLoaderRoute: typeof BuspayLocalizarOnibusRouteImport
+      parentRoute: typeof BuspayRouteRoute
+    }
+    '/buspay/nova-solicitacao-beneficio': {
+      id: '/buspay/nova-solicitacao-beneficio'
+      path: '/nova-solicitacao-beneficio'
+      fullPath: '/buspay/nova-solicitacao-beneficio'
+      preLoaderRoute: typeof BuspayNovaSolicitacaoBeneficioRouteImport
+      parentRoute: typeof BuspayRouteRoute
+    }
+    '/buspay/perfil': {
+      id: '/buspay/perfil'
+      path: '/perfil'
+      fullPath: '/buspay/perfil'
+      preLoaderRoute: typeof BuspayPerfilRouteImport
+      parentRoute: typeof BuspayRouteRoute
+    }
+    '/buspay/pontos-de-recarga': {
+      id: '/buspay/pontos-de-recarga'
+      path: '/pontos-de-recarga'
+      fullPath: '/buspay/pontos-de-recarga'
+      preLoaderRoute: typeof BuspayPontosDeRecargaRouteImport
+      parentRoute: typeof BuspayRouteRoute
+    }
+    '/buspay/recarga': {
+      id: '/buspay/recarga'
+      path: '/recarga'
+      fullPath: '/buspay/recarga'
+      preLoaderRoute: typeof BuspayRecargaRouteImport
+      parentRoute: typeof BuspayRouteRoute
+    }
+    '/buspay/solicitacoes-vt': {
+      id: '/buspay/solicitacoes-vt'
+      path: '/solicitacoes-vt'
+      fullPath: '/buspay/solicitacoes-vt'
+      preLoaderRoute: typeof BuspaySolicitacoesVtRouteImport
+      parentRoute: typeof BuspayRouteRoute
+    }
+    '/buspay/tarifas': {
+      id: '/buspay/tarifas'
+      path: '/tarifas'
+      fullPath: '/buspay/tarifas'
+      preLoaderRoute: typeof BuspayTarifasRouteImport
+      parentRoute: typeof BuspayRouteRoute
+    }
   }
 }
 
+interface BuspayRouteRouteChildren {
+  BuspayAjudaRoute: typeof BuspayAjudaRoute
+  BuspayBeneficioRoute: typeof BuspayBeneficioRoute
+  BuspayDependentesRoute: typeof BuspayDependentesRoute
+  BuspayExtratoRoute: typeof BuspayExtratoRoute
+  BuspayHomeRoute: typeof BuspayHomeRoute
+  BuspayLocalizarOnibusRoute: typeof BuspayLocalizarOnibusRoute
+  BuspayNovaSolicitacaoBeneficioRoute: typeof BuspayNovaSolicitacaoBeneficioRoute
+  BuspayPerfilRoute: typeof BuspayPerfilRoute
+  BuspayPontosDeRecargaRoute: typeof BuspayPontosDeRecargaRoute
+  BuspayRecargaRoute: typeof BuspayRecargaRoute
+  BuspaySolicitacoesVtRoute: typeof BuspaySolicitacoesVtRoute
+  BuspayTarifasRoute: typeof BuspayTarifasRoute
+  BuspayIndexRoute: typeof BuspayIndexRoute
+}
+
+const BuspayRouteRouteChildren: BuspayRouteRouteChildren = {
+  BuspayAjudaRoute: BuspayAjudaRoute,
+  BuspayBeneficioRoute: BuspayBeneficioRoute,
+  BuspayDependentesRoute: BuspayDependentesRoute,
+  BuspayExtratoRoute: BuspayExtratoRoute,
+  BuspayHomeRoute: BuspayHomeRoute,
+  BuspayLocalizarOnibusRoute: BuspayLocalizarOnibusRoute,
+  BuspayNovaSolicitacaoBeneficioRoute: BuspayNovaSolicitacaoBeneficioRoute,
+  BuspayPerfilRoute: BuspayPerfilRoute,
+  BuspayPontosDeRecargaRoute: BuspayPontosDeRecargaRoute,
+  BuspayRecargaRoute: BuspayRecargaRoute,
+  BuspaySolicitacoesVtRoute: BuspaySolicitacoesVtRoute,
+  BuspayTarifasRoute: BuspayTarifasRoute,
+  BuspayIndexRoute: BuspayIndexRoute,
+}
+
+const BuspayRouteRouteWithChildren = BuspayRouteRoute._addFileChildren(
+  BuspayRouteRouteChildren,
+)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  BuspayRouteRoute: BuspayRouteRouteWithChildren,
+  FotoDocumentoIdentificacaoRoute: FotoDocumentoIdentificacaoRoute,
+  SolicitarDesbloqueioVtRoute: SolicitarDesbloqueioVtRoute,
+  TirarSelfieRoute: TirarSelfieRoute,
+  AuthCadastroInicialRoute: AuthCadastroInicialRoute,
+  AuthRecuperarSenhaRoute: AuthRecuperarSenhaRoute,
+  AuthIndexRoute: AuthIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

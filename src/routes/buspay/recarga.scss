@@ -1,0 +1,41 @@
+.recarga-toolbar {
+  --background: var(--ion-color-primary) !important;
+  color: white;
+}
+
+.recarga-item:first-of-type {
+  border-top: 1px solid #dddddd;
+  border-bottom: 1px solid #dddddd;
+  padding: 0px 15px;
+}
+
+.recarga-item {
+  --min-height: 65px !important;
+}
+
+.itemC {
+  color: var(--ion-color-comum);
+}
+
+.itemE {
+  color: var(--ion-color-estudante);
+}
+
+.cartao-icon {
+  font-size: 30px;
+}
+
+.recarga-text {
+  font-size: 14px;
+}
+
+.padding-div-content {
+  padding: 10px 30px;
+}
+
+.select-cidade {
+  padding: 10px;
+  border: 1px solid #949494;
+  border-radius: 10px;
+  width: 100%;
+}

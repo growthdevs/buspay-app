@@ -1,0 +1,423 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Porte 1:1 do `src/global.scss` do app Ionic/Angular (Aplicativos.Buspay).
+ * Os imports do `@ionic/angular` foram trocados pelos equivalentes do
+ * `@ionic/react`; o restante das regras é idêntico ao original.
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import '@ionic/react/css/core.css';
+
+/* Basic CSS for apps built with Ionic */
+@import '@ionic/react/css/normalize.css';
+@import '@ionic/react/css/structure.css';
+@import '@ionic/react/css/typography.css';
+@import '@ionic/react/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import '@ionic/react/css/padding.css';
+@import '@ionic/react/css/float-elements.css';
+@import '@ionic/react/css/text-alignment.css';
+@import '@ionic/react/css/text-transformation.css';
+@import '@ionic/react/css/flex-utils.css';
+
+/*Bootstrap*/
+@import 'custom-bootstrap-vars.scss';
+@import 'bootstrap/scss/bootstrap';
+@import 'custom-bootstrap-classes.scss';
+@import 'custom-bootstrap-font-sizes.scss';
+@import 'custom-bootstrap-spacing.scss';
+
+/*Ionic theme*/
+@import 'variables.scss';
+
+.select-cidade {
+  padding: 10px;
+  border: 1px solid #949494;
+  border-radius: 10px;
+  width: 100%;
+}
+
+/*Swiper*/
+@import 'swiper/css/bundle';
+
+/* A família Poppins é carregada via <link> em `src/routes/__root.tsx`: um
+   `@import url(...)` externo depois dos imports empacotados quebra o bundler. */
+@import '@fontsource/material-symbols-outlined/index.css';
+
+ion-content,
+ion-button,
+ion-note,
+ion-label,
+ion-header,
+ion-app,
+ion-title,
+ion-input,
+ion-card-title,
+ion-card-content,
+ion-icon,
+ion-col,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+body {
+  font-family: 'Poppins' !important;
+}
+
+/* Classe para aplicar o ícones do material */
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined' !important;
+}
+
+.safe-area-top {
+  padding-top: env(safe-area-inset-top);
+}
+
+.safe-area-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+@media only screen and (max-width: 700px) {
+  .bg-auth {
+    --background: url('/assets/images/auth/bg_tela_login.jpg') 0 0/125% 100% no-repeat;
+    background: url('/assets/images/auth/bg_tela_login.jpg') 0 0/125% 100% no-repeat;
+    justify-content: flex-end;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  .bg-auth {
+    --background: url('/assets/images/auth/bg_tela_login.jpg') 0 0/100% 100% no-repeat;
+    background: url('/assets/images/auth/bg_tela_login.jpg') 0 0/100% 100% no-repeat;
+    justify-content: flex-end;
+  }
+
+  .modal-fullscreen {
+    --height: 100%;
+    --width: 100%;
+  }
+}
+
+.swiper-slide {
+  display: block !important;
+  text-align: initial !important;
+}
+
+.arrow-voltar {
+  justify-content: right;
+  color: var(--ion-color-primary) !important;
+}
+
+.bp-btn-primary {
+  --box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  --background: var(--ion-color-primary);
+  background: var(--ion-color-primary);
+  --border-radius: 0px !important;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  width: 100%;
+  margin-top: 5px;
+}
+
+.bp-btn-request {
+  color: var(--ion-color-primary-contrast);
+  font-size: 12px;
+  --border-radius: 0px;
+  width: 291.7px;
+  height: 43.59px;
+}
+
+.bp-btn-secondary {
+  --background: #ffffff;
+  background: #ffffff;
+  --border-width: 1px !important;
+  --box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  --border-radius: 0px !important;
+  color: var(--ion-color-primary);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  text-align: center;
+  width: 100%;
+}
+
+.bp-btn-secondary-no-shadow {
+  --background: #ffffff;
+  background: #ffffff;
+  --border-width: 1px !important;
+  --box-shadow: 0;
+  --border-radius: 0px !important;
+  color: var(--ion-color-primary);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  text-align: center;
+  width: 100%;
+}
+
+.bp-btn-secondary-grey {
+  --background: #ffffff;
+  background: #ffffff;
+  --border-color: var(--ion-color-medium);
+  --border-width: 1px !important;
+  --box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  --border-radius: 0px !important;
+  color: var(--ion-color-medium);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  width: 100%;
+}
+
+.bp-text-align {
+  text-align: center;
+}
+
+.bp-text-description {
+  font-size: 12px;
+  color: var(--BUSPAY-CINZA-CLARO-LABELS-TITULO);
+  text-align: left;
+  margin-top: 10px;
+}
+
+ion-button {
+  text-transform: none;
+}
+
+.bp-input {
+  font-size: 13px !important;
+  margin-bottom: 10px !important;
+  color: var(--ion-color-medium) !important;
+  border-color: var(--ion-color-medium) !important;
+}
+
+.bp-label {
+  color: var(--ion-color-dark);
+  font-size: 13px !important;
+  font-weight: 500;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.bp-subtitle {
+  color: var(--ion-color-primary-contrast);
+  font-size: 12px !important;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.bp-input-password {
+  border-left: solid 1px var(--ion-color-medium) !important;
+  border-top: solid 1px var(--ion-color-medium) !important;
+  border-bottom: solid 1px var(--ion-color-medium) !important;
+  border-bottom-left-radius: 5px !important;
+  border-top-left-radius: 5px !important;
+  font-size: 13px !important;
+  margin-bottom: 10px !important;
+  border-right: 0px !important;
+  display: flex;
+  height: 33px !important;
+}
+
+.bp-input-button {
+  height: 33px !important;
+  border-right: solid 1px var(--ion-color-medium) !important;
+  border-top: solid 1px var(--ion-color-medium) !important;
+  border-bottom: solid 1px var(--ion-color-medium) !important;
+  display: flex;
+  align-items: center;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  text-align: center;
+  white-space: nowrap;
+  border-radius: 5px;
+}
+
+/*placeholder bp styles */
+::-webkit-input-placeholder {
+  font-size: 13px !important;
+  color: var(--bp-placeholder-color) !important;
+}
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  font-size: 13px !important;
+  color: var(--bp-placeholder-color) !important;
+}
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  font-size: 13px !important;
+  color: #e5e5e5 !important;
+}
+
+/*fim placeholder bp styles */
+
+.bp-padding {
+  padding: 0px 15px 0px 15px;
+}
+
+.form-control:focus {
+  box-shadow: 0 0 8px var(--ion-color-primary) !important;
+}
+
+.form-check-input:focus {
+  box-shadow: 0 0 8px var(--ion-color-primary) !important;
+}
+
+.bp-toolbar-bg {
+  background: #211551;
+  --background: #211551;
+  color: white;
+}
+
+.notification-badge {
+  color: black;
+}
+
+.notification-toast {
+  --background: #ffffb0;
+  background: #ffffb0;
+  color: #333333;
+}
+
+.swiper-pagination-bullet {
+  width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 8px));
+  height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 8px));
+  display: inline-block;
+  border-radius: 50%;
+  background: var(--swiper-pagination-bullet-inactive-color, #000);
+  opacity: var(--swiper-pagination-bullet-inactive-opacity, 0.2);
+}
+
+.swiper-pagination-bullet-active {
+  opacity: var(--swiper-pagination-bullet-opacity, 1);
+  background: var(--swiper-pagination-color, var(--swiper-theme-color));
+}
+
+.qr-code {
+  text-align: center !important;
+  img,
+  canvas,
+  svg {
+    width: 320px;
+    height: 320px;
+  }
+}
+
+.header-backbutton {
+  margin-left: -15px;
+  margin-bottom: 5px;
+  color: #ffffff;
+}
+
+.header-backbutton-primary {
+  margin-left: -15px;
+  margin-bottom: 5px;
+  color: var(--ion-color-primary);
+}
+
+.bp-progress {
+  height: 14px !important;
+  background-color: var(--BUSPAY-CINZA-CLARO-LIGHTER) !important;
+  margin-bottom: 1rem !important;
+}
+
+.bp-progress-bar {
+  background: var(--BUSPAY-AZUL-ESCURO-SECONDARY) !important;
+}
+
+//accordions background //
+.item-header-accordion {
+  --background: #f2f2f2 !important;
+  background: #f2f2f2 !important;
+}
+
+.bloco-info {
+  background-color: var(--BUSPAY-CINZA-CLARO-LIGHTER);
+  padding: 15px 5px 10px 15px;
+}
+
+.searchbar-input.sc-ion-searchbar-md {
+  border: 1px solid #dddddd !important;
+}
+
+.bg-logo-azul {
+  margin: auto;
+  text-align: center;
+}
+
+.btn-alert-primario {
+  font-weight: 700 !important;
+}
+
+.btn-alert-secundario {
+  font-weight: normal !important;
+}
+
+body.camera-preview {
+  --background: transparent !important;
+  background: transparent !important;
+}
+
+.rate-app-modal .modal-wrapper {
+  background: transparent;
+  max-width: 300px;
+  margin: 0 auto;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 12px;
+  box-shadow: none;
+}
+
+.rate-app-modal {
+  --ion-background-color: transparent;
+}
+
+.rate-app-modal .modal-shadow {
+  display: none;
+}
+
+.small-font-text {
+  font-size: 0.8em;
+}
+
+.btn-close-modal {
+  font-size: 25px;
+}
+
+.bg-byx-menina {
+  --background: url('/assets/images/shared/menina-bg-byx.jpg') 0 0/100% 100% no-repeat;
+  background: url('/assets/images/shared/menina-bg-byx.jpg') 0 0/100% 100% no-repeat;
+}
+
+.ion-modal-dependentes {
+  --height: auto;
+  --width: 70%;
+  --border-radius: 10px;
+  backdrop-filter: brightness(0.5);
+}
+
+.modal-byx {
+  --background: transparent;
+}
+
+.amplify-liveness-video {
+  transform: scaleX(-1);
+}
+
+.carousel-inner {
+  height: 100% !important;
+}
+
+.carousel-item {
+  height: 100% !important;
+}

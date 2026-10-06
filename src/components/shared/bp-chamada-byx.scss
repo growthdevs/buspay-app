@@ -1,0 +1,131 @@
+.byx-widget {
+  position: fixed;
+  right: 0;
+  top: 40%;
+  transform: translateY(-50%);
+  z-index: 1000;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  filter: drop-shadow(-3px 3px 8px rgba(0, 0, 0, 0.25));
+
+  .byx-card {
+    background: #1565c0;
+    border-radius: 12px 0 0 12px;
+    padding: 15px 0px 15px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    overflow: hidden;
+    max-width: 160px;
+    min-width: 110px;
+    opacity: 1;
+    transition:
+      max-width 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+      min-width 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+      opacity 0.25s ease,
+      padding 0.35s ease;
+  }
+
+  .byx-logo-img {
+    height: 18px;
+    width: auto;
+    filter: brightness(0) invert(1);
+  }
+
+  .byx-title {
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin: 0;
+    white-space: nowrap;
+  }
+
+  .byx-highlight {
+    color: #ffd600;
+  }
+
+  .byx-tab {
+    background: #1565c0;
+    width: 27px;
+    flex-shrink: 0;
+    border-radius: 0 8px 8px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 4px;
+    cursor: pointer;
+    user-select: none;
+    height: auto;
+  }
+
+  .byx-close-icon {
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1;
+    opacity: 0.85;
+  }
+
+  .byx-tab-logo {
+    height: 20px;
+    width: auto;
+    filter: brightness(0) invert(1);
+    border-radius: 3px;
+  }
+
+  &.byx-collapsed {
+    .byx-card {
+      max-width: 0;
+      min-width: 0;
+      padding: 14px 0;
+      opacity: 0;
+    }
+
+    .byx-tab {
+      width: 63px;
+      border-radius: 8px 0 0 8px;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 4px;
+      height: 60px;
+    }
+  }
+}
+
+.margin-texto-byx {
+  margin-right: 10vw;
+}
+
+.byx-bg-azul {
+  background: #005ed1;
+  --background: #005ed1;
+}
+
+.amarelo-texto-byx {
+  color: #ffe900;
+}
+
+.icon-thumbnail-byx {
+  height: 23px;
+  width: 31px;
+}
+
+.byx-title {
+  color: white;
+  font-weight: 700;
+}
+
+.btn-simular-byx {
+  min-height: 40px;
+  font-size: 14px;
+  width: 90%;
+  margin: 0 auto;
+  background: #005ed1;
+  --background: #005ed1;
+  --border-radius: 0;
+  --box-shadow: none;
+}

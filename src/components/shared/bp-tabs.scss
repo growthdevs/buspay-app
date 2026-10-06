@@ -1,0 +1,39 @@
+.icon-tabs {
+  width: 25px;
+  height: 25px;
+}
+
+.title-menu {
+  font-size: 12px !important;
+  font-weight: bold !important;
+  color: var(--ion-color-medium);
+  line-height: 1.1;
+  text-align: center;
+}
+
+.bp-tab-bar {
+  display: flex;
+  height: 5rem;
+  width: 100%;
+  background: #fff;
+  border-top: 1px solid var(--ion-color-light);
+  align-items: stretch;
+}
+
+.bp-tab-button {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  color: var(--ion-color-medium);
+  min-width: 0;
+
+  ion-icon {
+    font-size: 26px;
+  }
+}

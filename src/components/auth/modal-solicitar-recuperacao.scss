@@ -1,0 +1,55 @@
+/* Porte de `pages/auth/modal-solicitar-recuperacao/*.scss`. */
+.modal-solicitar-recuperacao {
+  .bg-logo-modal {
+    margin: auto;
+    width: 30%;
+    height: 30%;
+  }
+
+  .label-titulo {
+    color: var(--ion-color-primary);
+    font-weight: 600;
+    font-size: 5vw;
+  }
+
+  .label-descricao {
+    font-size: 4vw;
+    font-weight: 400;
+    margin-top: 12px;
+  }
+
+  @media only screen and (max-width: 700px) {
+    .switch {
+      zoom: 0.7;
+    }
+  }
+
+  .label-switch {
+    font-size: 13px;
+    color: var(--ion-color-medium);
+  }
+
+  .btn-entrar {
+    height: 12vw;
+    font-size: 4vw;
+    line-height: 53px;
+    font-weight: 600;
+    --border-radius: 0px;
+  }
+
+  .btn-voltar {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0em;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 18px;
+  }
+
+  .validation-error {
+    font-size: x-small;
+  }
+}

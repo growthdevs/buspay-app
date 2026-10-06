@@ -1,0 +1,85 @@
+.extrato-toolbar {
+  --background: var(--ion-color-primary) !important;
+  color: white;
+  padding: 0px !important;
+}
+.extrato-toolbar.temaC {
+  --background: var(--ion-color-comum) !important;
+}
+.extrato-toolbar.temaVT {
+  --background: var(--ion-color-vt) !important;
+}
+.extrato-toolbar.temaE {
+  --background: var(--ion-color-estudante) !important;
+}
+.extrato-saldo-titulo {
+  display: flex;
+}
+.extrato-saldo-titulo-label {
+  font-size: 13px;
+  margin-top: 3px;
+}
+.extrato-saldo-titulo-icon {
+  font-size: 20px;
+  margin-left: 15px;
+}
+.extrato-saldo-valor {
+  color: var(--ion-color-primary);
+  font-size: 26px;
+}
+.textoTemaC {
+  color: var(--ion-color-comum);
+}
+.textoTemaVT {
+  color: var(--ion-color-vt);
+}
+.textoTemaE {
+  color: var(--ion-color-estudante);
+}
+.extrato-saldo-filtro-btn {
+  font-size: 12px;
+  width: 100px;
+  height: 40px;
+  --border-radius: 0px;
+  --border-width: 1px !important;
+  color: var(--ion-color-dark);
+  --border-color: var(--ion-color-dark);
+}
+.extrato-data {
+  font-size: 16px;
+  background: var(--ion-color-grey-header);
+  color: var(--ion-color-dark-shade);
+}
+.extrato-item {
+  padding: 16px 0;
+  border-bottom: 1px solid #dddddd;
+}
+.itemC {
+  color: var(--ion-color-comum);
+}
+.itemVT {
+  color: var(--ion-color-vt);
+}
+.itemE {
+  color: var(--ion-color-estudante);
+}
+.nenhum-registro-title {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+.nenhum-registro-text {
+  text-align: center;
+}
+.extrato-item-tipo-transacoes {
+  margin-bottom: 0 !important;
+  color: var(--ion-color-dark-shade);
+}
+.extrato-item-valor {
+  margin-top: 26px;
+  margin-bottom: 0 !important;
+  font-size: 14px;
+}
+.extrato-tipo-carteira {
+  font-weight: 600;
+}

@@ -1,0 +1,536 @@
+// ============================================================================
+// VARIÁVEIS DE FONT-SIZE
+// ============================================================================
+
+$font-size-xs: 0.75rem; // 12px
+$font-size-sm: 0.875rem; // 14px
+$font-size-md: 1rem; // 16px (padrão)
+$font-size-lg: 1.125rem; // 18px
+$font-size-xl: 1.5rem; // 24px
+$font-size-2xl: 2rem; // 32px
+$font-size-3xl: 2.5rem; // 40px
+$font-size-4xl: 3rem; // 48px
+$font-size-5xl: 3.5rem; // 56px
+$font-size-6xl: 4rem; // 64px
+
+// Line heights
+$line-height-tight: 1.2;
+$line-height-normal: 1.5;
+$line-height-loose: 1.8;
+
+// ============================================================================
+// CLASSES DE FONT-SIZE BÁSICAS
+// ============================================================================
+
+.fs-xs {
+  font-size: $font-size-xs;
+}
+
+.fs-sm {
+  font-size: $font-size-sm;
+}
+
+.fs-md {
+  font-size: $font-size-md;
+}
+
+.fs-lg {
+  font-size: $font-size-lg;
+}
+
+.fs-xl {
+  font-size: $font-size-xl;
+}
+
+.fs-2xl {
+  font-size: $font-size-2xl;
+}
+
+.fs-3xl {
+  font-size: $font-size-3xl;
+}
+
+.fs-4xl {
+  font-size: $font-size-4xl;
+}
+
+.fs-5xl {
+  font-size: $font-size-5xl;
+}
+
+.fs-6xl {
+  font-size: $font-size-6xl;
+}
+
+// ============================================================================
+// CLASSES COM FONT-WEIGHT: BOLD
+// ============================================================================
+
+.fs-xs-bold {
+  font-size: $font-size-xs;
+  font-weight: 700;
+}
+
+.fs-sm-bold {
+  font-size: $font-size-sm;
+  font-weight: 700;
+}
+
+.fs-md-bold {
+  font-size: $font-size-md;
+  font-weight: 700;
+}
+
+.fs-lg-bold {
+  font-size: $font-size-lg;
+  font-weight: 700;
+}
+
+.fs-xl-bold {
+  font-size: $font-size-xl;
+  font-weight: 700;
+}
+
+.fs-2xl-bold {
+  font-size: $font-size-2xl;
+  font-weight: 700;
+}
+
+.fs-3xl-bold {
+  font-size: $font-size-3xl;
+  font-weight: 700;
+}
+
+.fs-4xl-bold {
+  font-size: $font-size-4xl;
+  font-weight: 700;
+}
+
+.fs-5xl-bold {
+  font-size: $font-size-5xl;
+  font-weight: 700;
+}
+
+.fs-6xl-bold {
+  font-size: $font-size-6xl;
+  font-weight: 700;
+}
+
+// ============================================================================
+// CLASSES COM FONT-WEIGHT: SEMI-BOLD
+// ============================================================================
+
+.fs-xs-semibold {
+  font-size: $font-size-xs;
+  font-weight: 600;
+}
+
+.fs-sm-semibold {
+  font-size: $font-size-sm;
+  font-weight: 600;
+}
+
+.fs-md-semibold {
+  font-size: $font-size-md;
+  font-weight: 600;
+}
+
+.fs-lg-semibold {
+  font-size: $font-size-lg;
+  font-weight: 600;
+}
+
+.fs-xl-semibold {
+  font-size: $font-size-xl;
+  font-weight: 600;
+}
+
+.fs-2xl-semibold {
+  font-size: $font-size-2xl;
+  font-weight: 600;
+}
+
+.fs-3xl-semibold {
+  font-size: $font-size-3xl;
+  font-weight: 600;
+}
+
+.fs-4xl-semibold {
+  font-size: $font-size-4xl;
+  font-weight: 600;
+}
+
+.fs-5xl-semibold {
+  font-size: $font-size-5xl;
+  font-weight: 600;
+}
+
+.fs-6xl-semibold {
+  font-size: $font-size-6xl;
+  font-weight: 600;
+}
+
+// ============================================================================
+// CLASSES COM FONT-WEIGHT: MEDIUM
+// ============================================================================
+
+.fs-xs-medium {
+  font-size: $font-size-xs;
+  font-weight: 500;
+}
+
+.fs-sm-medium {
+  font-size: $font-size-sm;
+  font-weight: 500;
+}
+
+.fs-md-medium {
+  font-size: $font-size-md;
+  font-weight: 500;
+}
+
+.fs-lg-medium {
+  font-size: $font-size-lg;
+  font-weight: 500;
+}
+
+.fs-xl-medium {
+  font-size: $font-size-xl;
+  font-weight: 500;
+}
+
+.fs-2xl-medium {
+  font-size: $font-size-2xl;
+  font-weight: 500;
+}
+
+.fs-3xl-medium {
+  font-size: $font-size-3xl;
+  font-weight: 500;
+}
+
+.fs-4xl-medium {
+  font-size: $font-size-4xl;
+  font-weight: 500;
+}
+
+.fs-5xl-medium {
+  font-size: $font-size-5xl;
+  font-weight: 500;
+}
+
+.fs-6xl-medium {
+  font-size: $font-size-6xl;
+  font-weight: 500;
+}
+
+// ============================================================================
+// CLASSES COM FONT-WEIGHT: LIGHT
+// ============================================================================
+
+.fs-xs-light {
+  font-size: $font-size-xs;
+  font-weight: 300;
+}
+
+.fs-sm-light {
+  font-size: $font-size-sm;
+  font-weight: 300;
+}
+
+.fs-md-light {
+  font-size: $font-size-md;
+  font-weight: 300;
+}
+
+.fs-lg-light {
+  font-size: $font-size-lg;
+  font-weight: 300;
+}
+
+.fs-xl-light {
+  font-size: $font-size-xl;
+  font-weight: 300;
+}
+
+.fs-2xl-light {
+  font-size: $font-size-2xl;
+  font-weight: 300;
+}
+
+.fs-3xl-light {
+  font-size: $font-size-3xl;
+  font-weight: 300;
+}
+
+.fs-4xl-light {
+  font-size: $font-size-4xl;
+  font-weight: 300;
+}
+
+.fs-5xl-light {
+  font-size: $font-size-5xl;
+  font-weight: 300;
+}
+
+.fs-6xl-light {
+  font-size: $font-size-6xl;
+  font-weight: 300;
+}
+
+// ============================================================================
+// CLASSES COM LINE-HEIGHT: TIGHT
+// ============================================================================
+
+.fs-xs-tight {
+  font-size: $font-size-xs;
+  line-height: $line-height-tight;
+}
+
+.fs-sm-tight {
+  font-size: $font-size-sm;
+  line-height: $line-height-tight;
+}
+
+.fs-md-tight {
+  font-size: $font-size-md;
+  line-height: $line-height-tight;
+}
+
+.fs-lg-tight {
+  font-size: $font-size-lg;
+  line-height: $line-height-tight;
+}
+
+.fs-xl-tight {
+  font-size: $font-size-xl;
+  line-height: $line-height-tight;
+}
+
+.fs-2xl-tight {
+  font-size: $font-size-2xl;
+  line-height: $line-height-tight;
+}
+
+.fs-3xl-tight {
+  font-size: $font-size-3xl;
+  line-height: $line-height-tight;
+}
+
+.fs-4xl-tight {
+  font-size: $font-size-4xl;
+  line-height: $line-height-tight;
+}
+
+.fs-5xl-tight {
+  font-size: $font-size-5xl;
+  line-height: $line-height-tight;
+}
+
+.fs-6xl-tight {
+  font-size: $font-size-6xl;
+  line-height: $line-height-tight;
+}
+
+// ============================================================================
+// CLASSES COM LINE-HEIGHT: LOOSE
+// ============================================================================
+
+.fs-xs-loose {
+  font-size: $font-size-xs;
+  line-height: $line-height-loose;
+}
+
+.fs-sm-loose {
+  font-size: $font-size-sm;
+  line-height: $line-height-loose;
+}
+
+.fs-md-loose {
+  font-size: $font-size-md;
+  line-height: $line-height-loose;
+}
+
+.fs-lg-loose {
+  font-size: $font-size-lg;
+  line-height: $line-height-loose;
+}
+
+.fs-xl-loose {
+  font-size: $font-size-xl;
+  line-height: $line-height-loose;
+}
+
+.fs-2xl-loose {
+  font-size: $font-size-2xl;
+  line-height: $line-height-loose;
+}
+
+.fs-3xl-loose {
+  font-size: $font-size-3xl;
+  line-height: $line-height-loose;
+}
+
+.fs-4xl-loose {
+  font-size: $font-size-4xl;
+  line-height: $line-height-loose;
+}
+
+.fs-5xl-loose {
+  font-size: $font-size-5xl;
+  line-height: $line-height-loose;
+}
+
+.fs-6xl-loose {
+  font-size: $font-size-6xl;
+  line-height: $line-height-loose;
+}
+
+// ============================================================================
+// CLASSES COMBINADAS: FONT-SIZE + FONT-WEIGHT + LINE-HEIGHT
+// ============================================================================
+
+// XS Bold Tight
+.fs-xs-bold-tight {
+  font-size: $font-size-xs;
+  font-weight: 700;
+  line-height: $line-height-tight;
+}
+
+// SM Bold Tight
+.fs-sm-bold-tight {
+  font-size: $font-size-sm;
+  font-weight: 700;
+  line-height: $line-height-tight;
+}
+
+// MD Bold Tight
+.fs-md-bold-tight {
+  font-size: $font-size-md;
+  font-weight: 700;
+  line-height: $line-height-tight;
+}
+
+// LG Bold Tight
+.fs-lg-bold-tight {
+  font-size: $font-size-lg;
+  font-weight: 700;
+  line-height: $line-height-tight;
+}
+
+// XL Bold Tight
+.fs-xl-bold-tight {
+  font-size: $font-size-xl;
+  font-weight: 700;
+  line-height: $line-height-tight;
+}
+
+// 2XL Bold Tight
+.fs-2xl-bold-tight {
+  font-size: $font-size-2xl;
+  font-weight: 700;
+  line-height: $line-height-tight;
+}
+
+// 3XL Bold Tight
+.fs-3xl-bold-tight {
+  font-size: $font-size-3xl;
+  font-weight: 700;
+  line-height: $line-height-tight;
+}
+
+// 4XL Bold Tight
+.fs-4xl-bold-tight {
+  font-size: $font-size-4xl;
+  font-weight: 700;
+  line-height: $line-height-tight;
+}
+
+// 5XL Bold Tight
+.fs-5xl-bold-tight {
+  font-size: $font-size-5xl;
+  font-weight: 700;
+  line-height: $line-height-tight;
+}
+
+// 6XL Bold Tight
+.fs-6xl-bold-tight {
+  font-size: $font-size-6xl;
+  font-weight: 700;
+  line-height: $line-height-tight;
+}
+
+// ============================================================================
+// CLASSES COM MUTED (TEXTO SECUNDÁRIO)
+// ============================================================================
+
+.fs-xs-muted {
+  font-size: $font-size-xs;
+  color: var(--bs-secondary-text-emphasis);
+}
+
+.fs-sm-muted {
+  font-size: $font-size-sm;
+  color: var(--bs-secondary-text-emphasis);
+}
+
+.fs-md-muted {
+  font-size: $font-size-md;
+  color: var(--bs-secondary-text-emphasis);
+}
+
+.fs-lg-muted {
+  font-size: $font-size-lg;
+  color: var(--bs-secondary-text-emphasis);
+}
+
+.fs-xl-muted {
+  font-size: $font-size-xl;
+  color: var(--bs-secondary-text-emphasis);
+}
+
+.fs-2xl-muted {
+  font-size: $font-size-2xl;
+  color: var(--bs-secondary-text-emphasis);
+}
+
+.fs-3xl-muted {
+  font-size: $font-size-3xl;
+  color: var(--bs-secondary-text-emphasis);
+}
+
+.fs-4xl-muted {
+  font-size: $font-size-4xl;
+  color: var(--bs-secondary-text-emphasis);
+}
+
+.fs-5xl-muted {
+  font-size: $font-size-5xl;
+  color: var(--bs-secondary-text-emphasis);
+}
+
+.fs-6xl-muted {
+  font-size: $font-size-6xl;
+  color: var(--bs-secondary-text-emphasis);
+}
+
+// ============================================================================
+// VARIÁVEIS CSS CUSTOMIZADAS
+// ============================================================================
+
+:root {
+  --bs-font-size-xs: #{$font-size-xs};
+  --bs-font-size-sm: #{$font-size-sm};
+  --bs-font-size-md: #{$font-size-md};
+  --bs-font-size-lg: #{$font-size-lg};
+  --bs-font-size-xl: #{$font-size-xl};
+  --bs-font-size-2xl: #{$font-size-2xl};
+  --bs-font-size-3xl: #{$font-size-3xl};
+  --bs-font-size-4xl: #{$font-size-4xl};
+  --bs-font-size-5xl: #{$font-size-5xl};
+  --bs-font-size-6xl: #{$font-size-6xl};
+
+  --bs-line-height-tight: #{$line-height-tight};
+  --bs-line-height-normal: #{$line-height-normal};
+  --bs-line-height-loose: #{$line-height-loose};
+}
