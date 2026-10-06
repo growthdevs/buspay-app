@@ -10,3 +10,4 @@
 <!-- LOVABLE:END -->
 
 - Scope recharge selection styles under `.recarga-selecao` so wallet colors and controls do not leak into other Ionic screens.
+- Credit card registration and editing reuse the single form in src/components/recarga/pagamento-cartao.tsx (profile and recharge); recharges always pay with a saved card, so card data lives in app state.
