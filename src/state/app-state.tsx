@@ -90,7 +90,10 @@ export type AppState = {
 
 const AUTH_KEY = "buspay.autenticado";
 
-const AppStateContext = createContext<AppState | null>(null);
+// Mantém o mesmo contexto entre recarregamentos de módulo (HMR); sem isso o
+// provider antigo e os consumidores novos usam contextos diferentes.
+const globalCtx = globalThis as { __buspayAppStateCtx?: React.Context<AppState | null> };
+const AppStateContext = (globalCtx.__buspayAppStateCtx ??= createContext<AppState | null>(null));
 
 function autenticadoPersistido(): boolean {
   if (typeof sessionStorage === "undefined") return false;
