@@ -8,6 +8,7 @@ import type { DismissFn } from "../../lib/modal";
 import { delay } from "../../lib/native";
 import { overlayService } from "../../lib/overlay";
 import { useAppState } from "../../state/app-state";
+import "../cartoes/cartoes.scss";
 import "./selecao-pagamento.scss";
 
 /**

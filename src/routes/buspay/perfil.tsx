@@ -18,11 +18,13 @@ import {
   IonToggle,
   IonToolbar,
 } from "@ionic/react";
-import { cameraOutline, helpCircle } from "ionicons/icons";
+import { cameraOutline, cardOutline, helpCircle } from "ionicons/icons";
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useState } from "react";
 
 import { BackButton } from "../../components/shared/back-button";
+import { MeusCartoes } from "../../components/cartoes/meus-cartoes";
+import { PagamentoCartao } from "../../components/recarga/pagamento-cartao";
 import { BpContatos } from "../../components/shared/bp-contatos";
 import { aplicarMascaraCpfCnpj, aplicarMascaraNis, esconderDigitosCel, formatarData } from "../../lib/mask-tools";
 import { nomeApresentacaoCompleto } from "../../lib/nome-tools";
@@ -30,6 +32,7 @@ import { useModal } from "../../lib/modal";
 import { abrirNavegador, delay } from "../../lib/native";
 import { overlayService } from "../../lib/overlay";
 import { useAppState } from "../../state/app-state";
+import "../../components/cartoes/cartoes.scss";
 import "./perfil.scss";
 
 export const Route = createFileRoute("/buspay/perfil")({
@@ -39,7 +42,7 @@ export const Route = createFileRoute("/buspay/perfil")({
 function PerfilPage() {
   const navigate = useNavigate();
   const { present } = useModal();
-  const { dadosUsuario, autenticacaoBiometricaDisponivel, setDadosUsuario } = useAppState();
+  const { dadosUsuario, autenticacaoBiometricaDisponivel, setDadosUsuario, cartoes } = useAppState();
   const [biometria, setBiometria] = useState(true);
   const [push, setPush] = useState(true);
   const foto = dadosUsuario.fotoPerfilUrl || dadosUsuario.documentos.find((d) => d.url)?.url;
@@ -220,6 +223,32 @@ function PerfilPage() {
                     </div>
                   ))}
                 </IonLabel>
+              </IonItem>
+            </IonList>
+          </IonAccordion>
+        </IonAccordionGroup>
+        <IonAccordionGroup>
+          <IonAccordion value="cartoes">
+            <IonItem slot="header" className="item-header-accordion">
+              <IonLabel>Cartões de Crédito</IonLabel>
+            </IonItem>
+            <IonList slot="content">
+              <IonItem lines="none">
+                <IonLabel className="ion-text-wrap">
+                  <p className="cartoes-aviso">
+                    <IonIcon icon={cardOutline} className="me-1" />
+                    Os cartões salvos podem ser usados para recarga <b>somente nos municípios que aceitam pagamento com cartão de crédito</b>.
+                  </p>
+                </IonLabel>
+              </IonItem>
+              <IonItem button onClick={() => present((f) => <MeusCartoes dismiss={f} />, { cssClass: "modal-fullscreen" })}>
+                <IonText>Meus cartões ({cartoes.length})</IonText>
+              </IonItem>
+              <IonItem
+                button
+                onClick={() => present((f) => <PagamentoCartao dismiss={f} />, { backdropDismiss: false, cssClass: "modal-fullscreen" })}
+              >
+                <IonText>Adicionar cartão</IonText>
               </IonItem>
             </IonList>
           </IonAccordion>
