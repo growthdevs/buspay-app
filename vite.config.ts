@@ -12,4 +12,11 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
+  vite: {
+    // Pre-bundle Ionic up front: discovering it lazily makes Vite re-optimize and reload
+    // mid-session, leaving duplicate Ionic instances (missing styles, modals not opening).
+    optimizeDeps: {
+      include: ["@ionic/react", "@ionic/core", "ionicons", "ionicons/icons", "swiper"],
+    },
+  },
 });
